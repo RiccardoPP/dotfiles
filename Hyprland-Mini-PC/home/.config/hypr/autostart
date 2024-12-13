@@ -1,0 +1,43 @@
+#!/usr/bin/bash
+#
+# Riccardo Palombo - https://riccardo.im
+# Preparato per la community Patreon: patreon.com/riccardopalombo
+
+# wob (on screen display info)
+$WOBSOCK $XDG_RUNTIME_DIR/wob.sock &
+
+# blu light filter 
+gammastep -O 5800  2>/dev/null &
+
+# notifications 
+mako &
+
+# foot daemon
+foot --server &
+
+# wallpaper
+#swaybg -c '#3b05a6' & 
+#swaybg -i $HOME/Pictures/linux-viola-1920-1200.png &
+swaybg -i $HOME/Pictures/black-white.jpg &
+
+# screen lock
+swayidle -w timeout 300 'systemctl suspend' &
+
+# waybar
+# $HOME/scripts/waybar_top.sh &
+# $HOME/scripts/waybar_bottom.sh &
+$HOME/scripts/waybar_back.sh &
+$HOME/scripts/waybar_back_2.sh &
+
+# other
+/usr/lib/polkit-kde-authentication-agent-1 &
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+gsettings set org.gnome.desktop.interface gtk-theme 'WhiteSur-Light' &
+gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita' &
+gsettings set org.gnome.desktop.interface icon-theme 'Haiku' &
+gsettings set org.gnome.desktop.interface font-name 'Misc Ohsnap 12' &
+#gsettings set org.gnome.desktop.interface text-scaling-factor 1 &
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' &
+gsettings set org.cinnamon.desktop.default-applications.terminal exec footclient &
+rm -f $WOBSOCK.wob && mkfifo $WOBSOCK.wob && tail -f $WOBSOCK.wob | wob &

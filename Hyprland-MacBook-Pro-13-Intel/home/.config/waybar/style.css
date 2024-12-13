@@ -1,0 +1,152 @@
+/*
+** Riccardo Palombo - https://riccardo.im
+** Preparato per la community Patreon: patreon.com/riccardopalombo
+*/
+
+* {
+    font-family: JetBrains Mono, FontAwesome;
+    font-size: 13px;
+}
+
+window#waybar {
+    background: rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(0,0,0,.1); 
+    color: #3D3E40;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* tooltip label { */
+/* background-color: #0000FF; */
+/* color: #color; */
+/* border-radius: ##px; */
+/* border: style ##px #color; */
+/* margin: ##px; */
+/* } */
+
+.modules-right {
+	margin-right: 20px;	
+}
+
+.modules-left { 
+	 margin-left: 12px; 
+ } 
+
+#workspaces button {
+    padding: 2px 5px 0 5px;
+    margin-right: 4px;
+    background-color: transparent;
+    color: #999;
+    box-shadow: inset 0 -1px transparent; 
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background: inherit;
+    color: #87898C;
+    box-shadow: inherit;
+    text-shadow: inherit; 
+}
+
+#workspaces button.active {
+    color: #3D3E40;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#battery,
+#bluetooth,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#clock,
+#idle_inhibitor,
+#custom-gammastep,
+#custom-command
+ {
+    padding: 2px 5px 0 5px;
+    color: #3D3E40;
+}
+
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+@keyframes blink { 
+    to { 
+        /* background-color: #ffffff; */
+        color: #0000ff; 
+    } 
+} 
+
+#battery.critical:not(.charging) { 
+    /* background-color: #f53c3c; */
+    color: #f53c3c; 
+    animation-name: blink; 
+    animation-duration: 1s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+    animation-direction: alternate; 
+} 
+
+#network, #battery, #custom-gammastep, #bluetooth, #idle_inhibitor { 
+padding-top: 0;
+} 
+
+#network.disconnected, #network.disabled, #bluetooth.off, #bluetooth.disabled, #pulseaudio.muted { 
+color: #999; 
+}
+
+#clock { 
+/* background-color: #005fff; */
+margin-bottom: 1px;
+    font-weight: bold;
+
+} 
+
+#temperature { 
+margin-right: 20px;
+} 
+
+#custom-lock { 
+	margin-right: 10px;
+    background-color: #00009f; 
+    color: white;
+    padding: 2px 9px 0 10px;
+    font-size: 10px;
+    margin-bottom: 1px;
+} 
+
+#custom-command {
+	font-size: 16px;
+}
+
+/*#custom-gammastep { */
+    /* background-color: #5f5fff; */
+    /* color: white; */
+    /* padding: 2px 10px 0 13px; */
+    /* margin-bottom: 1px; */
+    /* margin-left: 20px; */
+/*} */

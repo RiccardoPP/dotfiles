@@ -1,0 +1,7 @@
+# Default rc.local for void; add your custom commands here.
+#
+# This is run by runit in stage 2 before the services are executed
+# (see /etc/runit/2).
+
+light -S 50
+cpupower -c all frequency-set -g powersave

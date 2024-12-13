@@ -1,0 +1,9 @@
+/*
+** Riccardo Palombo - https://riccardo.im
+** Preparato per la community Patreon: patreon.com/riccardopalombo
+*/
+
+configuration {
+	scrollbar-width: 0;
+	theme: "dmenu";
+}

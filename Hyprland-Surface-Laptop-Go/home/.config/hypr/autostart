@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+#
+# Riccardo Palombo - https://riccardo.im
+# Preparato per la community Patreon: patreon.com/riccardopalombo
+
+# wob
+$WOBSOCK $XDG_RUNTIME_DIR/wob.sock &
+
+# waybar
+$HOME/scripts/waybar_top.sh &
+$HOME/scripts/waybar_bottom.sh &
+
+# foot daemon
+foot --server &
+
+# wallpaper
+#swaybg -c '#3b05a6' & ## SOLO COLORE
+swaybg -i $HOME/pics/linux-viola.svg -m center &
+
+# other
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+gsettings set org.gnome.desktop.interface gtk-theme Adwaita &
+gsettings set org.gnome.desktop.interface cursor-theme Adwaita &
+gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono' &
+gsettings set org.gnome.desktop.interface text-scaling-factor 1 &
+#gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' &
+rm -f $WOBSOCK.wob && mkfifo $WOBSOCK.wob && tail -f $WOBSOCK.wob | wob --background-color='#0000ffff' &

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="192" height="192" viewBox="0 0 192 192">
+  <defs>
+    <rect id="todoist-a" width="152" height="152" x="0" y="0" rx="10"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(20 20)">
+    <mask id="todoist-b" fill="#fff">
+      <use xlink:href="#todoist-a"/>
+    </mask>
+    <use fill="#FF837D" xlink:href="#todoist-a"/>
+    <g stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" mask="url(#todoist-b)">
+      <g transform="translate(-19 48)">
+        <polyline points="105 40 52.5 72.5 0 40"/>
+        <polyline points="105 20 52.5 52.5 0 20"/>
+        <polyline points="105 0 52.5 32.5 0 0"/>
+      </g>
+    </g>
+  </g>
+</svg>

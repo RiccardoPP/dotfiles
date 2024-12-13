@@ -1,0 +1,31 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "breadcrumbs.enabled": false,
+    "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.wordWrap": "on",
+    "telemetry.telemetryLevel": "off",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "editor.background": "#222222",
+        "sideBar.background": "#262626",
+        "activityBar.background": "#303030",
+        "tab.activeBackground": "#262626",
+        "tab.inactiveBackground": "#303030",
+        "welcomePage.background": "#303030",
+        "statusBar.background": "#303030",
+        "editorGroupHeader.tabsBackground": "#303030",
+        "terminal.background": "#262626"
+    },
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "window.menuBarVisibility": "toggle",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "editor.formatOnSave": true,
+    "svelte.ask-to-enable-ts-plugin": false,
+    "files.associations": {
+        "*.svx": "markdown"
+    },
+    "editor.fontSize": 16
+}

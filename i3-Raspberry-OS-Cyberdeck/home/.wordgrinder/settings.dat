@@ -1,0 +1,13 @@
+WordGrinder dumpfile v3: this is a text file; diff me!
+.globalSettings.debug.currentword: false
+.globalSettings.debug.location: false
+.globalSettings.debug.memory: false
+.globalSettings.directories.templates: "/home/pi/.wordgrinder/templates"
+.globalSettings.lookandfeel.denseparagraphs: false
+.globalSettings.lookandfeel.enabled: true
+.globalSettings.lookandfeel.fullstopspaces: false
+.globalSettings.lookandfeel.maxwidth: 65
+.globalSettings.lookandfeel.terminators: false
+.globalSettings.recents.1: "/home/pi/notes/start.wg"
+.globalSettings.recents.2: "/home/pi/start.wg"
+.globalSettings.systemdictionary.filename: "/etc/dictionaries-common/words"

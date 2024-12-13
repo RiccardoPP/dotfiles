@@ -1,0 +1,152 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Misc Ohsnap;
+    font-size: 14px; 
+    padding:0;
+    margin:0;
+}
+
+window#waybar {
+    /* background-color: #e4e4de; */
+    background: transparent;
+    /* border-top: 1px solid #FFFFFF; */
+    border: none;
+    color: #FFF;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+
+/* #battery, */
+/* #cpu, */
+/* #memory, */
+/* #disk, */
+/* #temperature, */
+/* #backlight, */
+/* #network, */
+/* #pulseaudio, */
+/* #wireplumber, */
+/* #custom-media, */
+/* #tray, */
+/* #mode, */
+/* #idle_inhibitor, */
+/* #scratchpad, */
+/* #mpd { */
+    /* padding: 0; */
+    /* color: #000000; */
+/* } */
+/*  */
+
+/* #clock { */
+/* 	margin-bottom: 20px; */
+/* 	color: red; */
+/* } */
+
+/* #bluetooth, #idle_inhibitor { */
+/* 	margin-bottom: 20px; */
+/* } */
+
+#taskbar {
+	margin-top: 30px;
+}
+
+#taskbar button {
+	border: 1px solid gray;
+	padding: 6px 0 0 0;
+	background: lightgray;
+	margin-bottom: 2px;
+}
+
+ #taskbar button.active { 
+	background: #fff;
+ } 
+
+#battery.critical:not(.charging) {
+    /* background-color: #f53c3c; */
+    color: red;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    background-color: #2ecc71;
+    color: #000000;
+}
+
+/* #battery { */
+    /* background-color: #9b59b6; */
+/* } */
+/*  */
+/* #bluetooth { */
+    /* background-color: #964B00; */
+/* } */
+/*  */
+/* #network { */
+    /* background-color: #90b1b1; */
+    /* margin-bottom: 10px; */
+/* } */
+
+/* #bluetooth, #battery, #network { */
+    /* background-color: #000; */
+    /* color: #FFF; */
+/* } */
+
+
+
+/* #network.disconnected, #bluetooth.disabled { */
+    /* color: gray; */
+/* } */
+
+#pulseaudio {
+    background-color: #f1c40f;
+    color: #000000;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+
+/* #idle_inhibitor { */
+    /* background-color: #2d3436; */
+/* } */
+
+ #idle_inhibitor.activated { 
+    color: #999;
+ } 
+
+#custom-command {
+    /* color: #000; */
+    background: #111; 
+    border: 1px solid #555;
+    margin-left: 60px;
+    padding:5px;
+    
+}

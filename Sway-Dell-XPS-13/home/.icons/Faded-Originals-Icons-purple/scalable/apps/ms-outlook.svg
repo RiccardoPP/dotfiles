@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="192" height="192" viewBox="0 0 192 192">
+  <defs>
+    <rect id="outlook-a" width="174" height="126" x="0" y="0" rx="9"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(11 35)">
+      <mask id="outlook-b" fill="#fff">
+        <use xlink:href="#outlook-a"/>
+      </mask>
+      <use fill="#FFF" xlink:href="#outlook-a"/>
+      <path stroke="#D8D8D8" stroke-opacity=".2" stroke-width="5" d="M96.0084641,80.0419989 C91.171959,84.9863848 83.2830082,85.0115528 78.4103023,80.1003192 L-3.54203227,-2.5 L176.749493,-2.5 L96.0084641,80.0419989 Z" mask="url(#outlook-b)"/>
+    </g>
+    <path fill="#9ABEFF" d="M10,46.1548022 C10,40.6367793 14.2890665,34.888343 19.5850617,33.3137752 L88.4149383,12.8497628 C93.7086217,11.2758823 98,14.4829293 98,19.9986976 L98,176.001302 C98,181.523431 93.7258378,184.683313 88.4359435,183.053723 L19.5640565,161.837238 C14.281974,160.210054 10,154.414067 10,148.899696 L10,46.1548022 Z"/>
+    <text fill="#FFF" font-family="Now-Black, Now" font-size="36" font-weight="700">
+      <tspan x="38" y="115">O</tspan>
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+# This file contains all themerc options with default values
+#
+# System-wide and local themes can be overridden by creating a copy of this
+# file and renaming it to $HOME/.config/labwc/themerc-override. Be careful
+# though - if you only want to override a small number of specific options,
+# make sure all other lines are commented out or deleted.
+
+# general
+border.width: 1
+padding.height: 3
+
+# window border
+window.active.border.color: #dddad6
+window.inactive.border.color: #f6f5f4
+
+# ToggleKeybinds status indicator
+window.active.indicator.toggled-keybind.color: #ff0000
+
+# window titlebar background
+window.active.title.bg.color: #dddad6
+window.inactive.title.bg.color: #f6f5f4
+
+# window titlebar text
+window.active.label.text.color: #000000
+window.inactive.label.text.color: #000000
+window.label.text.justify: center
+
+# window buttons
+window.active.button.unpressed.image.color: #000000
+window.inactive.button.unpressed.image.color: #000000
+
+# Note that "menu", "iconify", "max", "close" buttons colors can be defined
+# individually by inserting the type after the button node, for example:
+#
+#     window.active.button.iconify.unpressed.image.color: #333333
+
+# menu
+menu.overlap.x: 0
+menu.overlap.y: 0
+menu.width.min: 20
+menu.width.max: 200
+menu.items.bg.color: #fcfbfa
+menu.items.text.color: #000000
+menu.items.active.bg.color: #dddad6
+menu.items.active.text.color: #000000
+menu.items.padding.x: 7
+menu.items.padding.y: 4
+menu.separator.width: 1
+menu.separator.padding.width: 6
+menu.separator.padding.height: 3
+menu.separator.color: #888888
+
+# on screen display (window-cycle dialog)
+osd.bg.color: #dddda6
+osd.border.color: #000000
+osd.border.width: 1
+osd.label.text.color: #000000
+
+osd.window-switcher.width: 600
+osd.window-switcher.padding: 4
+osd.window-switcher.item.padding.x: 10
+osd.window-switcher.item.padding.y: 1
+osd.window-switcher.item.active.border.width: 2

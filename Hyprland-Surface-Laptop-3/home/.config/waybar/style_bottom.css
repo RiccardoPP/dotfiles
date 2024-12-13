@@ -1,0 +1,73 @@
+/*
+** Riccardo Palombo - https://riccardo.im
+** Preparato per la community Patreon: patreon.com/riccardopalombo
+*/
+
+* {
+    font-family:FontAwesome, JetBrains Mono;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: rgba(255,255,255,.3);
+    border-top: 1px solid rgba(0,0,0,.1);
+    color: #3D3E40;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#window {
+    margin-left: 15px;
+    padding-top: 1px;
+}
+
+.modules-right {
+	margin-top: 1px;
+ }
+
+#custom-crypto { 
+	padding: 2px 0 0 17px; 
+    background-color: #F2CDA0; 
+} 
+
+#idle_inhibitor { 
+	padding: 2px 15px 0; 
+    background-color: #3434e0; 
+    color:	white;
+} 
+
+#custom-write { 
+	padding: 2px 17px 0; 
+    background: rgba(172,191,172,.7); 
+} 
+
+#custom-vpn { 
+	padding: 2px 8px 0; 
+	background: #F2CDA0;
+/*    background: rgba(172,191,172,.7); 
+    background: rgba(160,215,242,.7); */
+} 
+
+#custom-command { 
+    background-color: #F2D9D0; 
+    padding: 2px 8px 0;
+    margin-top:1px;
+} 
+
+#custom-pacman { 
+    background: rgba(177,166,242,.6);
+    padding: 2px 17px 0;
+} 
+
+#user { 
+	background-color: #3434e0;
+    color: white;
+    padding: 2px 10px 0 13px;
+} 
+
+#disk { 
+	background-color: #ff00ff;
+    color: white;
+    padding: 2px 10px 0 13px;
+} 

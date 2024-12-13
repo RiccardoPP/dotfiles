@@ -1,0 +1,161 @@
+//
+// Riccardo Palombo - https://riccardo.im
+// Preparato per la community Patreon: patreon.com/riccardopalombo
+//
+{
+    "layer": "top", // Waybar at top layer
+    "output": "DP-2",
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 28, // Waybar height (to be removed for auto height)
+    "spacing": 24, // Gaps between modules (4px)
+    "modules-left": [
+//      "custom/vpn"
+//      "custom/command"
+//      "clock"
+       "wlr/workspaces"
+   ],
+   "modules-center": [
+//       "disk"
+//       "wlr/workspaces"
+		"clock"
+    ],
+    "modules-right": [
+//        "custom/power_profile",
+//		"idle_inhibitor",
+        "custom/write",
+        "custom/vpn",
+        "custom/pacman",
+        "custom/crypto"
+    ],
+    // Modules configuration
+     "custom/power_profile": {
+        "exec": "sleep 0.3 && $HOME/scripts/powerprofilecycle.sh -m",
+        "interval": 120,
+        "on-click": "$HOME/scripts//powerprofilecycle.sh",
+        "exec-on-event": true,
+        "tooltip": false
+    },
+    
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "ACTIVATED",
+            "deactivated": "DEACTIVATED"
+        }
+    },
+    "wlr/workspaces": {
+            "format": "{name}",
+            "on-click": "activate",
+                    "all-outputs": true,
+    //        "on-scroll-up": "hyprctl dispatch workspace e+1",
+    //    	"on-scroll-down": "hyprctl dispatch workspace e-1"
+        },
+    "cpu": {
+        "format": "[CPU {usage}%",
+        "tooltip": false,
+        //"on-click": "footclient --override=colors.background=000000 --title=fly-foot-tiled htop"
+    },
+    "memory": {
+        "format": "RAM {}%",
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C",
+        "format": "TEMP {temperatureC}°C]",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "tooltip": false,
+    },
+    
+    "custom/crypto": {
+        "format": "{}",
+        "interval": 600,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/crypto/waybar_crypto.py",
+        "exec-if": "ping pro-api.coinmarketcap.com -c1",
+        "on-click": "firefox --new-tab https://it.tradingview.com"
+    },
+    "custom/pacman": {
+        "format": "PACMAN [{}]",
+        "interval": 7200,
+        "exec": "checkupdates | wc -l",
+        "exec-if": "exit 0",
+        
+       "on-click": "footclient --override=colors.background=ff0000 --override=colors.foreground=FFFFFF --title=fly-foot-write sudo pacman -Syu ; pkill -SIGRTMIN+8 waybar",
+        "signal": 8,
+        "tooltip": false,
+    },
+    "custom/command": {
+        "format": "",
+        "on-click": "$HOME/scripts/tofi-power.sh",
+        "tooltip": false
+    },
+    "hyprland/window": {
+        "format": "{title}"
+    },
+    "user": {
+        "format": "UPTIME [{work_d}D {work_H}H {work_M}M]",
+        "interval": 60,
+        "avatar": "/home/mm/pics/icons/face1.png",
+        "height": 28,
+        "width": 28,
+        "icon": false,
+        "open-on-click": true,
+        "open-path": "home/mm/"
+    },
+    "custom/write": {
+        "format": "README",
+        "on-click": "footclient --title=fly-foot-write --override=colors.background=FFFFF8 --override=colors.foreground=000000 micro $HOME/Documents/dotfiles/n-one-duo/README",
+        "tooltip": false
+    },
+        "clock": {
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "<span text-transform='uppercase'>{:%A %d %B, %H:%M}</span>",
+//        "format": "{:%d %b, %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 2,
+                    //"weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#fffffe'><b>{}</b></span>",
+                              "days":       "<span color='#efefef'><b>{}</b></span>",
+                              //"weeks":      "<span color='#999999'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff0000'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+
+    "custom/vpn": {
+            "format": "VPN [{}]",
+            "exec": "$HOME/scripts/tofi-nordvpn.sh -s",
+            "interval": 5,
+            "on-click-right": "$HOME/scripts/tofi-nordvpn.sh &",
+            //"on-click": "$HOME/scripts/tofi-power.sh",
+            "tooltip": false
+
+            
+    },
+    "disk": {
+        "interval": 60,
+        "format": "VAULT OPEN",
+        "path": "/mnt/veracrypt1",
+        "on-click": "nemo",
+        "tooltip-format": "{path} ({percentage_used}%)"
+    }
+}

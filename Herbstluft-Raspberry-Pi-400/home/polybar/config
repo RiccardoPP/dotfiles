@@ -1,0 +1,79 @@
+#
+# Riccardo Palombo - https://riccardo.im
+# Preparato per la community Patreon: patreon.com/riccardopalombo
+#
+# Polybar per Raspberry Pi 400
+#
+
+[color]
+bg = #222222
+fg = #d7d7af
+ac = #454545
+mf = #383838
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+include-file = ~/.config/polybar/modules.ini
+
+[bar/main]
+; $ polybar -m | cut -d ':' -f 1 o $ xrandr -q | grep " connected" | cut -d ' ' -f1
+; lasciare vuoti i campi monitor sotto se non si conosce il loro nome
+monitor = HDMI-1
+monitor-strict = false
+
+override-redirect = true
+bottom = true
+fixed-center = true
+width = 100%
+height = 36
+offset-x = 0%
+offset-y = 0%:
+
+background = ${color.bg}
+foreground = ${color.fg}
+radius-top = 0.0
+radius-bottom = 0.0
+overline-size = 6
+underline-size = 6
+overline-color = ${color.bg}
+underline-color = ${color.bg}
+border-top-size = 1
+border-color = ${color.ac}
+padding = 8
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "Piboto Condensed:size=9;3"
+font-1 = "FontAwesome:size=10;3"
+
+modules-left = sysmenu
+modules-center = hlwm
+modules-right = pifi keyboard cpu memory filesystem calendar
+
+spacing = 0
+dim-value = 1.0
+tray-position = none
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+
+;; Cambio di tag con rotellina del mouse
+scroll-up = herbstclient use_index -1 --skip-visible
+scroll-down = herbstclient use_index +1 --skip-visible
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = false
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+pseudo-transparency = false

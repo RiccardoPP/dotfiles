@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="192"
+   height="192"
+   viewBox="0 0 192 192"
+   version="1.1"
+   id="svg916"
+   sodipodi:docname="goa-account-owncloud.svg"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)">
+  <metadata
+     id="metadata922">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs920" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     id="namedview918"
+     showgrid="false"
+     inkscape:zoom="4.2135417"
+     inkscape:cx="96"
+     inkscape:cy="96"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg916" />
+  <rect
+     style="fill:#9abeff;fill-rule:evenodd"
+     id="rect908"
+     rx="10"
+     y="20"
+     x="20"
+     height="152"
+     width="152" />
+  <path
+     style="fill:#ffffff;fill-rule:evenodd"
+     inkscape:connector-curvature="0"
+     id="path910"
+     d="m 129.6744,132.28165 c 10.39792,-0.27246 18.74227,-8.68208 18.74227,-19.01638 0,-10.50622 -8.62429,-19.023189 -19.26289,-19.023189 -0.18732,0 -0.37401,0.0026 -0.56004,0.0079 0.0262,-0.513506 0.0394,-1.030379 0.0394,-1.550306 0,-16.753158 -13.75224,-30.334276 -30.716493,-30.334276 -15.059169,0 -27.587238,10.702078 -30.211124,24.824897 -11.418267,1.283094 -20.288876,10.85652 -20.288876,22.476004 0,12.49388 10.25591,22.62217 22.907216,22.62217 H 129.6744 v -0.007 z" />
+</svg>

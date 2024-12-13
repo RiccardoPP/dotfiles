@@ -1,0 +1,9 @@
+#
+# Riccardo Palombo - https://riccardo.im
+# Preparato per la community Patreon: patreon.com/riccardopalombo
+#
+
+# Lancio redshift (filtro luce blu) quando KDE è avviato da SDDM
+# così posso gestirlo dal modulo Polybar
+
+redshift -PO 5600 &

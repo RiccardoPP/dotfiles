@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="96" cy="96" r="82" fill="#56595B" stroke="#B1B5BD" stroke-width="10"/>
+    <g transform="rotate(150 46.971 85.022)">
+      <polygon fill="#FFF" points="10 .949 20 51 0 51"/>
+      <polygon fill="#FF837D" points="10 51 20 101.051 0 101.051" transform="matrix(1 0 0 -1 0 152.051)"/>
+    </g>
+  </g>
+</svg>

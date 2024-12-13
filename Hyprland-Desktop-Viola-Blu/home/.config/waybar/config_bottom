@@ -1,0 +1,118 @@
+//
+// Riccardo Palombo - https://riccardo.im
+// Preparato per la community Patreon: patreon.com/riccardopalombo
+//
+{
+    "layer": "top", // Waybar at top layer
+//        "output": "DP-3",
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 28, // Waybar height (to be removed for auto height)
+    "spacing": 0, // Gaps between modules (4px)
+    "modules-left": [
+        "custom/command",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "disk"
+//        "wlr/workspaces"
+    ],
+    "modules-right": [
+        "custom/write",
+//        "custom/power_profile",
+//		"idle_inhibitor",
+        "custom/pacman",
+        "custom/crypto"
+    ],
+    // Modules configuration
+     "custom/power_profile": {
+        "exec": "sleep 0.3 && $HOME/scripts/powerprofilecycle.sh -m",
+        "interval": 120,
+        "on-click": "$HOME/scripts//powerprofilecycle.sh",
+        "exec-on-event": true,
+        "tooltip": false
+    },
+    
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "ACTIVATED",
+            "deactivated": "DEACTIVATED"
+        }
+    },
+    "wlr/workspaces": {
+            "format": "{name}",
+            "on-click": "activate",
+    //        "on-scroll-up": "hyprctl dispatch workspace e+1",
+    //    	"on-scroll-down": "hyprctl dispatch workspace e-1"
+        },
+    "cpu": {
+        "format": "[CPU {usage}%",
+        "tooltip": false,
+        //"on-click": "footclient --override=colors.background=000000 --title=fly-foot-tiled htop"
+    },
+    "memory": {
+        "format": "RAM {}%",
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C",
+        "format": "TEMP {temperatureC}°C]",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "tooltip": false,
+    },
+    
+    "custom/crypto": {
+        "format": "{}",
+        "interval": 600,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/crypto/waybar_crypto.py",
+        "exec-if": "ping pro-api.coinmarketcap.com -c1",
+        "on-click": "firefox --new-tab https://it.tradingview.com"
+    },
+    "custom/pacman": {
+        "format": "PACMAN [{}]",
+        "interval": 7200,
+        "exec": "checkupdates | wc -l",
+        "exec-if": "exit 0",
+        
+       "on-click": "footclient --override=colors.background=000000 --title=fly-foot sudo pacman -Syu ; pkill -SIGRTMIN+8 waybar",
+        "signal": 8,
+        "tooltip": false,
+    },
+    "custom/command": {
+        "format": "",
+        "on-click": "$HOME/scripts/rofi-power.sh",
+        "tooltip": false
+    },
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "user": {
+        "format": "UPTIME [{work_d}D {work_H}H {work_M}M]",
+        "interval": 60,
+        "avatar": "/home/mm/pics/icons/face1.png",
+        "height": 28,
+        "width": 28,
+        "icon": false,
+        "open-on-click": true,
+        "open-path": "home/mm/"
+    },
+    "custom/write": {
+        "format": "README",
+        "on-click": "footclient --title=fly-foot-write --override=colors.background=000000 --override=colors.foreground=ffffff micro $HOME/Documents/dotfiles/thinkpad-x1-6gen/Arch/README",
+        "tooltip": false
+    },
+    "disk": {
+        "interval": 60,
+        "format": "VAULT OPEN",
+        "path": "/mnt/veracrypt1",
+        "on-click": "nemo",
+        "tooltip-format": "{path} ({percentage_used}%)"
+    }
+}

@@ -1,0 +1,10 @@
+# LabWC autostart file
+
+#swaybg -i -c '#ffa500' >/dev/null 2>&1 &
+swaybg -i ~/Pictures/wp.png -m center >/dev/null 2>&1 &
+waybar >/dev/null 2>&1 &
+mako >/dev/null 2>&1 &
+gammastep -O 5600 2>&1 &
+/usr/libexec/pipewire-launcher 2>&1 &
+swayidle -w timeout 600 'sudo zzz' 2>&1 &
+brightnessctl set 50% 2>&1 &

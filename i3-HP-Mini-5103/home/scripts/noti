@@ -1,0 +1,24 @@
+#!/bin/sh
+# Info sul sistema in stile notifica (chi ha bisogno di una status bar?)
+# Riccardo Palombo - https://riccardo.im
+# Preparato per la community Patreon: patreon.com/riccardopalombo
+
+case "$1" in
+
+  -a)
+      pkill herbe & \
+      herbe "$(date +'%I:%M %P')" " "\
+       		"$(date +'%a, %d %b')" " "\
+            "$(set -- $(sensors | grep -i core); printf '%s\n' "CPU: $4")" " "\
+            "Batteria: $(cat /sys/class/power_supply/BAT0/capacity)%" " "\
+			"Schermo: $(light)%" ;;
+ -b)
+	pkill herbe & \
+	herbe "Batteria al $(cat /sys/class/power_supply/BAT0/capacity)%!";;
+ -c)
+	pkill herbe & \
+	herbe "Resta il $(cat /sys/class/power_supply/BAT0/capacity)%" " "\
+	"Chiudo picom!" " "\
+	"Abbasso tutto!"	;;
+
+esac

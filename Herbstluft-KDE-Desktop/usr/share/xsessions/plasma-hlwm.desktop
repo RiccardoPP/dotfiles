@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=XSession
+Exec=env KDEWM=/usr/bin/herbstluftwm /usr/bin/startplasma-x11
+DesktopNames=KDE
+Name=Plasma + Herbstluftwm
+Comment=Plasma w/HLWM by RP

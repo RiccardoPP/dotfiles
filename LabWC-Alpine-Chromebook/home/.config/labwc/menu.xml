@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+<menu id="root-menu" label="root-menu">
+		<item label="Logout">
+			<action name="Execute"><command>labwc --exit</command></action>
+		</item>
+		<item label="Suspend">
+			<action name="Execute"><command>zzz</command></action>
+		</item>
+		<item label="Restart">
+			<action name="Execute"><command>reboot</command></action>
+		</item>
+		<item label="Shutdown">
+			<action name="Execute"><command>poweroff</command></action>
+		</item>
+	<separator/>
+	<menu id="Tools" label="Tools">
+		<item label="Terminal">
+			<action name="Execute"><command>foot</command></action>
+		</item>
+		<item label="Firefox">
+			<action name="Execute"><command>firefox</command></action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute"><command>pcmanfm</command></action>
+		</item>
+		<item label="Launcher">
+			<action name="Execute"><command>tofi-drun</command></action>
+		</item>
+			<separator/>
+
+		<menu id="Vpn" label="VPN">
+		<item label="Connect">
+			<action name="Execute"><command>nmcli connection up us2950.nordvpn.com.udp</command></action>
+		</item>
+		<item label="Disconnect">
+			<action name="Execute"><command>nmcli connection down us2950.nordvpn.com.udp</command></action>
+		</item>
+		<item label="Network Manager Config">
+			<action name="Execute"><command>nm-connection-editor</command></action>
+		</item>
+	</menu>
+	</menu>
+ <!-- Other -->
+
+</menu> <!-- root-menu -->
+</openbox_menu>

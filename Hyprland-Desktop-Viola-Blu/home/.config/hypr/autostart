@@ -1,0 +1,39 @@
+#!/usr/bin/bash
+#
+# Riccardo Palombo - https://riccardo.im
+# Preparato per la community Patreon: patreon.com/riccardopalombo
+
+# wob (on screen display info)
+$WOBSOCK $XDG_RUNTIME_DIR/wob.sock &
+
+# blu light filter 
+gammastep -O 5800  2>/dev/null &
+
+# notifications 
+mako &
+
+# foot daemon
+foot --server &
+
+# wallpaper
+#swaybg -c '#3b05a6' & 
+swaybg -i $HOME/Pictures/linux-viola.svg &
+
+# screen lock
+swayidle -w timeout 300 'systemctl suspend' &
+
+# waybar
+$HOME/scripts/waybar_top.sh &
+$HOME/scripts/waybar_bottom.sh &
+
+# other
+/usr/lib/polkit-kde-authentication-agent-1 &
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+gsettings set org.gnome.desktop.interface gtk-theme Adwaita &
+gsettings set org.gnome.desktop.interface cursor-theme Adwaita &
+gsettings set org.gnome.desktop.interface font-name 'Jetbrains Mono 10' &
+gsettings set org.gnome.desktop.interface text-scaling-factor 1 &
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' &
+gsettings set org.cinnamon.desktop.default-applications.terminal exec footclient &
+rm -f $WOBSOCK.wob && mkfifo $WOBSOCK.wob && tail -f $WOBSOCK.wob | wob &

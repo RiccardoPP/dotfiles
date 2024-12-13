@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="192" height="192" viewBox="0 0 192 192">
+  <defs>
+    <circle id="steam-a" cx="96" cy="96" r="87"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="steam-b" fill="#fff">
+      <use xlink:href="#steam-a"/>
+    </mask>
+    <use fill="#56595B" xlink:href="#steam-a"/>
+    <g fill="#FFF" mask="url(#steam-b)">
+      <g transform="rotate(-33 148.667 71.578)">
+        <polygon points="53.142 53.498 97.893 46.563 97.893 86.092 53.142 79.157"/>
+        <ellipse cx="116.912" cy="66.049" rx="29.088" ry="28.951"/>
+        <ellipse cx="117.192" cy="66.327" stroke="#56595B" stroke-width="5" rx="14.824" ry="14.754"/>
+        <ellipse cx="52.023" cy="66.049" rx="22.375" ry="22.27"/>
+        <ellipse cx="52.303" cy="66.327" stroke="#56595B" stroke-width="5" rx="14.824" ry="14.754"/>
+        <path d="M21.9061724,14.2379817 C21.9061724,6.66378839 28.0404371,0.523691511 35.6111533,0.523691511 L35.6111533,0.523691511 C43.1802052,0.523691511 49.3161341,6.66090473 49.3161341,14.2379817 L49.3161341,71.4357476 C49.3161341,79.0099409 43.1818694,85.1500378 35.6111533,85.1500378 L35.6111533,85.1500378 C28.0421013,85.1500378 21.9061724,79.0128246 21.9061724,71.4357476 L21.9061724,14.2379817 Z" transform="scale(1 -1) rotate(35 171.472 0)"/>
+      </g>
+    </g>
+  </g>
+</svg>

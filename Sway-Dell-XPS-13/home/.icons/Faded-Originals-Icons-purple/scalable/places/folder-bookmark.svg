@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="192"
+   height="192"
+   viewBox="0 0 192 192"
+   version="1.1"
+   id="svg861"
+   sodipodi:docname="folder-bookmarks.svg"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)">
+  <metadata
+     id="metadata867">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs865" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     id="namedview863"
+     showgrid="false"
+     inkscape:zoom="1.489712"
+     inkscape:cx="-179.52918"
+     inkscape:cy="169.32338"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg861" />
+  <rect
+     style="fill:#8C72BD;fill-rule:evenodd"
+     id="rect855"
+     rx="10"
+     y="20"
+     x="20"
+     height="152"
+     width="152" />
+  <path
+     style="fill:#BD9AFF;fill-rule:evenodd"
+     inkscape:connector-curvature="0"
+     id="path857"
+     d="M 20,42.996537 C 20,37.475602 24.477592,33 29.998474,33 h 33.568298 c 8.458718,0 11.573767,13.256422 15.366043,13.256422 h 83.064475 c 5.52434,0 10.00271,4.475281 10.00271,9.998342 V 162.00166 C 172,167.52359 167.523,172 161.99748,172 H 30.002517 C 24.478279,172 20,167.53265 20,162.00346 Z" />
+  <polygon
+     id="polygon2280"
+     points="83.373,38.148 117.168,37.516 116.695,104.308 82.929,105.413 76,108.552 66.475,105.038 35.059,105.038 35.69,37.516 69.881,37.516 76,40.665 "
+     style="fill:#ff0000;fill-opacity:0"
+     transform="matrix(0.6553622,0,0,0.6553622,46.192466,58.129119)" />
+  <path
+     sodipodi:type="star"
+     style="fill:#8C72BD;fill-opacity:1;fill-rule:evenodd;stroke:#8C72BD;stroke-width:3.004;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stroke-linejoin:round"
+     id="path3487"
+     sodipodi:sides="5"
+     sodipodi:cx="-95.999999"
+     sodipodi:cy="-106.87647"
+     sodipodi:r1="30.252459"
+     sodipodi:r2="15.12623"
+     sodipodi:arg1="1.5707963"
+     sodipodi:arg2="2.1991149"
+     inkscape:flatsided="false"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="m -95.999999,-76.624014 -8.890981,-18.015082 -19.88082,-2.888852 14.3859,-14.022792 -3.39605,-19.80049 17.781951,9.34853 17.781947,-9.34853 -3.396048,19.8005 14.385898,14.022781 -19.880823,2.888854 z"
+     inkscape:transform-center-y="-2.8888536"
+     inkscape:transform-center-x="3.718967e-06"
+     transform="scale(-1)" />
+</svg>

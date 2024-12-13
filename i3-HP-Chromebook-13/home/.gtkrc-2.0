@@ -1,0 +1,19 @@
+# DO NOT EDIT! This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
+
+include "/home/rp/.gtkrc-2.0.mine"
+gtk-theme-name="Akwa-dark"
+gtk-icon-theme-name="Papirus-Dark"
+gtk-font-name="Roboto Condensed, Light 10"
+gtk-cursor-theme-name="Vanilla-DMZ-AA"
+gtk-cursor-theme-size=0
+gtk-toolbar-style=GTK_TOOLBAR_BOTH
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-button-images=1
+gtk-menu-images=1
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=1
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintslight"
+gtk-xft-rgba="rgb"

@@ -1,0 +1,17 @@
+/*
+** Riccardo Palombo - https://riccardo.im
+** Preparato per la community Patreon: patreon.com/riccardopalombo
+*/
+
+configuration {
+  timeout {
+      delay:  5;
+      action: "kb-cancel";
+  }
+  drun-display-format: "{name}";
+  hover-select: true;
+  me-select-entry: "";
+  me-accept-entry: [MousePrimary];
+}
+@theme "blue.rasi"
+

@@ -1,0 +1,11 @@
+--- src/lua/document.lua	2020-12-24 15:16:09.752077341 +0100
++++ src/lua/document-nb.lua	2020-12-24 15:15:51.291308132 +0100
+@@ -701,7 +701,7 @@
+ 	local ds =
+ 	{
+ 		fileformat = FILEFORMAT,
+-		statusbar = true,
++		statusbar = false,
+ 		documents = {},
+ 		addons = {},
+ 	}

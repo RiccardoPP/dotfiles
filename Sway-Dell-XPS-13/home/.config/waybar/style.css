@@ -1,0 +1,107 @@
+* {
+	/* color: #fdfdfc; */
+	border: 0;
+	border-radius: 0;
+	font-size: 11px;
+	min-height: 0px;
+	padding: 0;
+	margin:  4px 0;
+	/*max-height: 13px;*/
+	font-family: FontAwesome, "SF Pro Tex";
+}
+
+#window {
+	padding: 10px;
+}
+
+window#waybar {
+	padding: 0 0;
+	background-color: #262626;
+	color: #bfbfbf; 
+ /* border-right: 2px solid #303030; */
+	border-right: none; 
+}
+
+window#waybar.hidden {
+	background-color: #262626;
+}
+
+window#waybar.empty {
+	background-color: #262626;
+}
+
+window#waybar.solo {
+	background-color: #262626;
+}
+
+#workspaces button {
+	padding: 0 10px;
+	margin: 0;
+	background-color: transparent;
+	/*border-left: 2px solid rgba(100, 114, 125, 0.5);*/
+	/* border-left: 3px solid #262626; */
+	color: #bfbfbf;
+}
+
+#workspaces button.focused {
+	color: #ffffff; 
+	background-color: transparent;
+	/* border-left: 3px solid #f4f99d; */
+}
+
+#workspaces button.persistent {
+	/* border-left: 3px solid #262626; */
+	color: #666;
+}
+
+#workspaces button.urgent {
+	/* border-left: 3px solid #ff76a1; */
+}
+
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+
+#network {
+	background-color: transparent;
+	border-left: none;
+}
+#clock,
+#cpu,
+#memory,
+#backlight,
+#pulseaudio,
+#tray,
+#mode,
+#battery,
+
+#clock {
+	border-left: none;
+}
+#tray {
+	border-left: none;
+}
+#cpu {
+	border-left: none;
+}
+#memory {
+	border-left: none;
+}
+
+label:focus {
+	background-color: #000000;
+}
+
+#custom-poweroff { 
+	margin-top: 10px;
+}
+
+#clock { 
+	margin-top: 15px; 
+}
+
+#clock.min { 
+	margin-top: -5px;
+	margin-bottom: 10px 
+} 

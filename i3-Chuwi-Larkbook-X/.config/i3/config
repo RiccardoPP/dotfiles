@@ -1,0 +1,144 @@
+#
+# i3 config file
+#
+# Riccardo Palombo - https://riccardo.im
+# Preparato per la community Patreon: patreon.com/riccardopalombo
+#
+
+set $mod Mod4
+
+set_from_resource $border i3.border
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #000000 #285577 #ffffff #2e9ef4   $border
+client.focused_inactive #000000 #5f676a #ffffff #484e50   $border
+client.unfocused        #000000 #222222 #888888 #292d2e   $border
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #fdfdfc
+font xft:Roboto Condensed:size=11
+floating_modifier $mod
+
+# start a terminal (a schermo intero o in finestra flottante)
+bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Shift+Return exec --no-startup-id kitty -name float_term -geometry 109x30
+
+# theme switch
+bindsym $mod+Shift+s exec --no-startup-id ~/scripts/switch.sh
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start rofi 
+bindsym $mod+space exec --no-startup-id rofi -modi "drun" -show drun -display-drun "run:" -drun-display-format {name} -theme $(cat ~/.config/rofi/theme)
+
+# start dmenu patchato
+#bindsym $mod+space exec --no-startup-id dmenu_run -fn "Hack:size=11" -nb '#101010' -nf '#666666' -sb '#101010' -sf '#ffffff' -h 30 -bw 10 -p 'run: '
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# default orientation
+default_orientation vertical
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# toggle tiling / floating
+bindsym $mod+Shift+space exec --no-startup-id ~/scripts/bd.sh
+bindsym $mod+Shift+Ctrl+space exec --no-startup-id ~/scripts/bd-big.sh
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+
+# switch to opened workspaces
+bindsym $mod+Control+Up workspace next
+bindsym $mod+Control+Down workspace prev
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace
+bindsym $mod+Shift+r restart
+
+# exit i3 
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window
+mode "resize" {
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Mappatura tasti multimediali
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 20
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 10
+bindsym XF86AudioMute exec --no-startup-id pamixer -t
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+
+# Info notification
+bindsym $mod+i exec --no-startup-id ~/scripts/noti -a
+
+# Screenshot
+bindsym Print exec --no-startup-id maim -u $HOME/Immagini/screen/`date +%Y-%m-%d_%H:%M:%S`.png && herbe "Screen salvato"
+bindsym $mod+Print exec --no-startup-id maim -s -u $HOME/Immagini/screen/`date +%Y-%m-%d_%H:%M:%S`.png && herbe "Screen salvato"
+
+default_border pixel
+default_floating_border pixel 10
+#hide_edge_borders both
+
+for_window [class="URxvt" instance="float_term"] floating enable, border pixel 10, move absolute position center
+
+gaps inner -4
+
+# Programmi da avviare
+exec --no-startup-id feh --bg-tile ~/Immagini/mappa-light.png
+#exec --no-startup-id xsetroot -solid '#303030'
+exec --no-startup-id udiskie 
+exec --no-startup-id picom -b
+#exec --no-startup-id urxvtd -q -f -o 
+exec --no-startup-id /usr/bin/unclutter
+exec --no-startup-id light -S 80
+exec --no-startup-id ~/scripts/checkbattery.sh
+exec --no-startup-id ~/scripts/noti -a

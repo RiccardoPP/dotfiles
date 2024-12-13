@@ -1,0 +1,20 @@
+# Copyright 2017 The Chromium OS Authors. All rights reserved.
+# Distributed under the terms of the GNU General Public License v2
+#
+# Special keyboard mapping for Eve project. The keyboard has extra
+# "Assistant" and "Hamburger" keys.
+#
+evdev:atkbd:dmi:bvn*:bvr*:bd*:svnGoogle:pnEve:pvr*
+ KEYBOARD_KEY_5d=delete
+ KEYBOARD_KEY_d8=rightmeta
+ KEYBOARD_KEY_db=leftmeta
+ KEYBOARD_KEY_3b=back
+ KEYBOARD_KEY_3c=f5
+ KEYBOARD_KEY_3d=f11
+ KEYBOARD_KEY_3e=print
+ KEYBOARD_KEY_3f=brightnessdown
+ KEYBOARD_KEY_40=brightnessup
+ KEYBOARD_KEY_41=playpause
+ KEYBOARD_KEY_42=mute
+ KEYBOARD_KEY_43=volumedown
+ KEYBOARD_KEY_44=volumeup

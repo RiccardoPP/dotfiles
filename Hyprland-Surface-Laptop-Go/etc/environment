@@ -1,0 +1,22 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+#QT_STYLE_OVERRIDE=kvantum
+
+BROWSER=firefox
+EDITOR=micro
+#QT_QPA_PLATFORMTHEME=qt5ct
+MOZ_ENABLE_WAYLAND=1
+QT_QPA_PLATFORM=wayland-egl
+CLUTTER_BACKEND=wayland
+ECORE_EVAS_ENGINE=wayland-egl
+ELM_ENGINE=wayland_egl
+SDL_VIDEODRIVER=wayland
+_JAVA_AWT_WM_NONREPARENTING=1
+NO_AT_BRIDGE=1
+
+#ATTIVARE QUESTI SOLO SE OTTIMIZZATA LA GESTIONE DRIVER (ovvero: se sapete cosa state facendo)
+#LIBVA_DRIVER_NAME=iHD
+#VDPAU_DRIVER=va_gl

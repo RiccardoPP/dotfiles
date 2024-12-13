@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="192" height="192" viewBox="0 0 192 192">
+  <defs>
+    <rect id="programm-a" width="152" height="152" x="20" y="20" rx="10"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="programm-b" fill="#fff">
+      <use xlink:href="#programm-a"/>
+    </mask>
+    <use fill="#FF837D" transform="matrix(1 0 0 -1 0 192)" xlink:href="#programm-a"/>
+    <polyline stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" points="46 115 64.656 129.641 46 144.172" mask="url(#programm-b)"/>
+    <line x1="81.5" x2="105.521" y1="145" y2="145" stroke="#FFF" stroke-linecap="round" stroke-width="10" mask="url(#programm-b)"/>
+  </g>
+</svg>

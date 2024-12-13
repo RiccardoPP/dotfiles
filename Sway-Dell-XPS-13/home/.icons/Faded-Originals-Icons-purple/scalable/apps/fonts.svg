@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="192"
+   height="192"
+   viewBox="0 0 192 192"
+   version="1.1"
+   id="svg883"
+   sodipodi:docname="applications-fonts.svg"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)">
+  <metadata
+     id="metadata889">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs887" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     id="namedview885"
+     showgrid="false"
+     inkscape:zoom="3.71875"
+     inkscape:cx="72.800802"
+     inkscape:cy="81.005218"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg883" />
+  <circle
+     style="fill:#8c72bd;fill-rule:evenodd;stroke:#8c72bd;fill-opacity:1;stroke-opacity:1"
+     id="circle873"
+     r="88"
+     cy="96"
+     cx="96" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:75.49153137px;line-height:1.25;font-family:'Now Alt';-inkscape-font-specification:'Now Alt';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.17955518;stroke-opacity:1;"
+     x="25.215403"
+     y="118.38444"
+     id="text1441"
+     transform="scale(0.99282792,1.0072239)"><tspan
+       sodipodi:role="line"
+       id="tspan1439"
+       x="25.215403"
+       y="118.38444"
+       style="stroke-width:1.17955518;stroke:none;stroke-opacity:1;fill:#ffffff;fill-opacity:1;">abc</tspan></text>
+</svg>

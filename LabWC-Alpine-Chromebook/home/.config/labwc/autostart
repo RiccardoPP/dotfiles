@@ -1,0 +1,10 @@
+# LabWC autostart file
+
+swaybg -c '#bebebe' >/dev/null 2>&1 &
+waybar >/dev/null 2>&1 &
+mako >/dev/null 2>&1 &
+gammastep -O 5500 2>&1 &
+/usr/libexec/pipewire-launcher 2>&1 &
+swayidle -w timeout 600 'sudo zzz' 2>&1 &
+brightnessctl set 40% 2>&1 &
+#udiskie 2>&1 &

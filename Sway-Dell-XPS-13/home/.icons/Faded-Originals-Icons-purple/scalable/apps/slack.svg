@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <g fill="none" fill-rule="evenodd" stroke-linecap="round">
+    <g stroke="#FFF" stroke-width="40" transform="rotate(-20 188.691 -33.633)">
+      <line x1="26.942" x2="26.942" y1="1.095" y2="117.145"/>
+      <line x1="92.052" x2="92.052" y1="1.095" y2="117.145"/>
+      <line x1="118.994" y1="27.37" y2="27.37"/>
+      <line x1="118.994" y1="89.775" y2="89.775"/>
+    </g>
+    <g stroke-width="20" transform="rotate(-20 188.691 -33.633)">
+      <line x1="26.942" x2="26.942" y1="1.095" y2="117.145" stroke="#F9DE81"/>
+      <line x1="92.052" x2="92.052" y1="1.095" y2="117.145" stroke="#98DC9A"/>
+      <line x1="118.994" y1="27.37" y2="27.37" stroke="#9ABEFF"/>
+      <line x1="118.994" y1="89.775" y2="89.775" stroke="#FF837D"/>
+    </g>
+  </g>
+</svg>

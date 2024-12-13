@@ -1,0 +1,37 @@
+# Example environment file
+
+# This allows xdg-desktop-portal-wlr to function (e.g. for screen-recording)
+XDG_CURRENT_DESKTOP=wlroots
+
+# Set two keyboard layouts and toggle between them using alt+shift
+#XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
+
+# Force firefox to use wayland backend
+MOZ_ENABLE_WAYLAND=1
+
+# Set cursor theme.
+# Find icons themes with the command below or similar:
+#     find /usr/share/icons/ -type d -name "cursors"
+
+# Disable hardware cursors. Most users wouldn't want to do this, but if you
+# are experiencing issues with disappearing cursors, this might fix it.
+#WLR_NO_HARDWARE_CURSORS=1
+
+# For Java applications such as JetBrains/Intellij Idea, set this variable
+# to avoid menus with incorrect offset and blank windows
+# See https://github.com/swaywm/sway/issues/595
+_JAVA_AWT_WM_NONREPARENTING=1
+XCURSOR_THEME=Adwaita
+XCURSOR_SIZE=24
+XKB_DEFAULT_LAYOUT=it
+BROWSER=firefox
+EDITOR=micro
+LIBVA_DRIVER_NAME=iHD
+VDPAU_DRIVER=va_gl
+
+QT_QPA_PLATFORMTHEME=qt5ct
+QT_PLATFORM_PLUGIN=qt5ct
+QT_PLATFORMTHEME=qt5ct
+QT_QPA_PLATFORM=wayland
+#QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+QT_AUTO_SCREEN_SCALE_FACTOR=1

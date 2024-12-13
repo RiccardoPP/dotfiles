@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="192" height="192" viewBox="0 0 192 192">
+  <defs>
+    <rect id="my_movies-a" width="152" height="20" x="0" y="0" rx="10"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="152" height="88" x="21" y="84" fill="#56595B" rx="10"/>
+    <line x1="46.5" x2="148.5" y1="124.5" y2="124.5" stroke="#FFF" stroke-linecap="round" stroke-width="5"/>
+    <line x1="46.5" x2="148.5" y1="146.5" y2="146.5" stroke="#FFF" stroke-linecap="round" stroke-width="5"/>
+    <g fill="#FFF" transform="translate(26 84)">
+      <polygon points="20 0 45 0 25 20 0 20"/>
+      <polygon points="69 0 94 0 74 20 49 20"/>
+      <polygon points="118 0 143 0 123 20 98 20"/>
+    </g>
+    <g transform="rotate(-6 573.069 -164.852)">
+      <mask id="my_movies-b" fill="#fff">
+        <use xlink:href="#my_movies-a"/>
+      </mask>
+      <use fill="#56595B" xlink:href="#my_movies-a"/>
+      <g fill="#FFF" mask="url(#my_movies-b)">
+        <g transform="translate(5)">
+          <polygon points="20 0 45 0 25 20 0 20"/>
+          <polygon points="69 0 94 0 74 20 49 20"/>
+          <polygon points="118 0 143 0 123 20 98 20"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

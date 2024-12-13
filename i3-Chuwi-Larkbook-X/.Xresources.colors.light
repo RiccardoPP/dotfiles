@@ -1,0 +1,12 @@
+!
+! Riccardo Palombo - https://riccardo.im
+! Preparato per la community Patreon: patreon.com/riccardopalombo
+!
+
+! special
+*.foreground:   #3c3c3b
+*.background:   #fdfdfc
+*.border:		#f7f7f7
+
+herbe.background_color: #fdfdfc
+herbe.font_color: #3c3c3b

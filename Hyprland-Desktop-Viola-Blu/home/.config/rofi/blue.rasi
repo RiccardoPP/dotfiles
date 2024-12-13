@@ -1,0 +1,59 @@
+/*
+** Riccardo Palombo - https://riccardo.im
+** Preparato per la community Patreon: patreon.com/riccardopalombo
+*/
+
+
+* {
+    background-color:      #0000ff;
+    text-color:           #fff;
+    font:            "Terminus 9";
+}
+
+window {
+    anchor:     south;
+    location:   south west;
+    width:      65%;
+    height:		25px;
+    padding:    4px;
+    children:   [ horibox ];
+    y-offset: 30px;
+    x-offset: 35px;
+    }
+
+horibox {
+    orientation: horizontal;
+    children:   [ prompt, entry, listview ];
+}
+
+listview {
+    layout:     horizontal;
+    spacing:    20px;
+    lines:      50;
+}
+
+entry {
+    expand:     false;
+    width:      8em;
+    margin:		0;
+    color:		white;
+}
+
+element {
+    padding: 0px;
+}
+
+element selected {
+    background-color: #ff00ff;
+    text-color: white;
+}
+
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
+  highlight: bold;
+}
+
+#prompt {
+  enabled: false;
+}

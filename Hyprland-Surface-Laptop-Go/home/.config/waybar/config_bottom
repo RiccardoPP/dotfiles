@@ -1,0 +1,46 @@
+//
+// Riccardo Palombo - https://riccardo.im
+// Preparato per la community Patreon: patreon.com/riccardopalombo
+//
+
+{
+     "layer": "top", // Waybar at top layer
+     "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 25, // Waybar height (to be removed for auto height)
+    //"width": 1480, // Waybar width
+    "spacing": 8, // Gaps between modules (4px)
+
+    // Choose the order of the modules
+    "modules-left": ["custom/command", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["custom/pacman", "custom/crypto"],
+
+    // Modules configuration
+"custom/crypto": {
+    "format": "{}",
+    "interval": 600,
+    "return-type": "json",
+    "exec": "~/.config/waybar/modules/crypto/waybar_crypto.py",
+    "exec-if": "ping pro-api.coinmarketcap.com -c1"
+},
+
+"custom/pacman": {
+    "format": "PACMAN [{}]",
+    "interval": 7200,                     
+    "exec": "checkupdates | wc -l",       
+    "exec-if": "exit 0",
+    "on-click": "footclient --override=colors.background=000000 --title=fly-foot",                  
+    "signal": 8,
+    "tooltip": false,
+},
+
+"custom/command": {
+    "format": " ",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+    },
+"hyprland/window": {
+    "format": "{}"
+}
+ }
+

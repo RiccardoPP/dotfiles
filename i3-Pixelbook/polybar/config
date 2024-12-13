@@ -1,0 +1,292 @@
+[colors]
+background = #00000000
+#background = #262626
+background-alt = #444
+foreground = #f9f9f9
+foreground-alt = #888
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[bar/top]
+;monitor = ${env:MONITOR:HDMI-A-0}
+width = 100%
+height = 40
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = true
+override-redirect = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+overline-size = 0
+overline-color = #f00
+underline-size = 0
+underline-color = #00f
+
+border-bottom-size = 0
+border-bottom-color = #000
+
+padding-left = 8
+padding-right = 8
+module-margin-left = 0
+module-margin-right = 10
+
+font-0 = Cantarell::weight=bold:antialias=true:pixelsize=11;3
+font-1 = Material Design Icons:antialias=true:size=13;3
+
+modules-left = menu i3
+modules-center = popup-calendar 
+modules-right = memory cpu backlight battery pulseaudio check-night-shift wlan powermenu
+
+#tray-position = 
+tray-padding = 0
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:80:...%
+
+[module/menu]
+type = custom/text
+content = ""
+content-margin = "0"
+;content-background = ${colors.background-alt}
+content-foreground = ${colors.foreground}
+click-left = /usr/bin/gnome-session-quit --logout
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.background}
+label-focused-underline = ${colors.alert}
+label-focused-padding = 5
+
+label-occupied = %index%
+label-occupied-padding = 5
+
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 5
+
+label-empty = %index%
+label-empty-foreground = ${colors.alert}
+label-empty-padding = 5
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+label-mode-padding = 5
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+label-focused = %index%
+label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-padding = ${module/bspwm.label-focused-padding}
+
+label-unfocused = %index%
+label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused-foreground = ${colors.background-alt}
+
+label-urgent = %index%!
+label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+[module/check-night-shift]
+type = custom/script
+exec = ~/.config/polybar/nightshift.sh
+interval = 5 
+click-left = .config/polybar/toggle-nightlight.sh
+
+[module/weather]
+type = custom/script
+interval = 600
+;format-prefix = "ROMA  "
+format-prefix-foreground = ${colors.foreground-alt}
+format = "<label>"
+exec = ~/.config/polybar/polybar-forecast
+exec-if = ping openweathermap.org -c 1
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "CPU  "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f90000
+label = %percentage%%
+
+[module/uptime]
+type = custom/script
+interval = 1200
+format = "<label>"
+#format-prefix = "UPTIME "
+format-foreground = ${colors.foreground-alt}
+exec = ~/.config/polybar/uptime
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format-prefix = "LUX  "
+format-prefix-foreground = ${colors.foreground-alt}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "RAM  "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
+label = %percentage_used%%
+
+[module/wlan]
+type = internal/network
+interface = wlp1s0
+#interface = enp6s0
+interval = 3.0
+format-connected = <label-connected>
+format-connected-underline = #9f78e1
+format-disconnected-underline = ${self.format-connected-underline}
+#click-left = %local_ip%
+label-connected = ""
+#label-connected = ONLINE
+label-connected-foreground = ${colors.foreground}
+label-disconnected = ""
+label-disconnected-foreground = ${colors.foreground-alt}
+ramp-signal-0 = LINE
+ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 30
+date = "%a %d %b"
+time = %H:%M
+time-alt = %H:%M:%S
+#format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+label = %date% %time%
+
+[module/popup-calendar]
+type = custom/script
+exec = ~/.config/polybar/popup-calendar.sh
+interval = 5
+click-left = ~/.config/polybar/popup-calendar.sh --popup &
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = VOL <label-volume>
+format-volume-foreground = ${colors.foreground-alt}
+label-volume = " %percentage%%"
+label-volume-foreground = ${colors.foreground}
+label-muted = ""
+label-muted-foreground = ${colors.foreground-alt}
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+
+format-charging = <animation-charging>+<label-charging>
+format-charging-underline = #ffb52a
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = "BAT "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = "BAT "
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = "BAT "
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+#[module/system-fan-speed]
+#type = custom/script
+#exec = ~/.config/polybar/system-fan-speed.sh
+#interval = 50
+#format-prefix = "FAN  "
+#format-prefix-foreground = ${colors.foreground-alt}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+interval = 10
+warn-temperature = 60
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon0/temp1_input
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = "TMP "
+ramp-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+format-spacing = 4
+#format-background = ${colors.background-alt}
+
+label-open =""
+label-open-padding = 0
+label-open-foreground = ${colors.foreground}
+;label-open-background = ${colors.background-alt}
+
+label-close = "cancel "
+label-close-foreground = ${colors.primary}
+label-separator = | 
+label-separator-foreground = ${colors.foreground-alt}
+label-close-padding-left = 1
+
+menu-0-0 = reboot
+menu-0-0-exec = systemctl reboot
+menu-0-1 = power off
+menu-0-1-exec = systemctl poweroff
+menu-0-2 = suspend
+menu-0-2-exec = systemctl suspend
+menu-0-2-padding-right = 5

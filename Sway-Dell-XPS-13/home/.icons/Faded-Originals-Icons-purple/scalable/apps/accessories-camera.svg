@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="192" height="192" viewBox="0 0 192 192">
+  <defs>
+    <rect id="camera-a" width="152" height="152" x="0" y="0" rx="10"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(22 22)">
+    <g transform="rotate(180 76 76)">
+      <mask id="camera-b" fill="#fff">
+        <use xlink:href="#camera-a"/>
+      </mask>
+      <use fill="#B1B5BD" xlink:href="#camera-a"/>
+      <rect width="159" height="33" x="-3" y="125" fill="#B1B5BD" mask="url(#camera-b)"/>
+    </g>
+    <path fill="#56595B" stroke="#FFF" stroke-width="6" d="M76.5,117 C98.8675324,117 117,98.8675324 117,76.5 C117,54.1324676 98.8675324,36 76.5,36 C54.1324676,36 36,54.1324676 36,76.5 C36,98.8675324 54.1324676,117 76.5,117 Z"/>
+    <circle cx="138" cy="14" r="6" fill="#FFF"/>
+  </g>
+</svg>

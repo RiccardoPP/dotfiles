@@ -1,0 +1,41 @@
+/*
+** Riccardo Palombo - https://riccardo.im
+** Preparato per la community Patreon: patreon.com/riccardopalombo
+*/
+
+* {
+    font-family:FontAwesome, Terminus;
+    font-size: 11px;
+}
+
+window#waybar {
+    background-color: #0000FF;
+    color: #e5e5e5;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#window {
+    margin-left: 15px;
+}
+
+#custom-crypto { 
+	padding-left: 15px; 
+    background-color: #005fff; 
+    color:	white;
+    padding-top: 2px;
+} 
+
+#custom-command { 
+    background-color: #00009f; 
+    color: white;
+    padding: 0 5px 0 10px;
+    font-size:9px;
+} 
+
+#custom-pacman { 
+    background-color: #3434e0; 
+    color: white;
+    padding: 2px 10px 0 13px;
+} 
+

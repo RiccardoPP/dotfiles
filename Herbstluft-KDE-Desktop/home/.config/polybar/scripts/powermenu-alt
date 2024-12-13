@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Riccardo Palombo - https://riccardo.im
+# Preparato per la community Patreon: patreon.com/riccardopalombo
+#
+# Modificare i comandi in base alla distro, soprattutto quello per Suspend e Logout
+
+MENU="$(rofi -sep "|" -dmenu -i -p 'system' <<< "Suspend|Reboot|Shutdown")"
+            case "$MENU" in
+                *Suspend) sudo zzz ;;
+#                *Logout) herbstclient quit;;
+                *Reboot) sudo shutdown -r now ;;
+                *Shutdown) sudo shutdown -h now
+            esac

@@ -1,0 +1,216 @@
+# Default config for sway
+#
+# Riccardo Palombo - https://riccardo.im
+# Preparato per la community Patreon: patreon.com/riccardopalombo
+#
+
+xwayland disable
+
+
+# Software
+set {
+    $mod Mod4
+    $term foot
+    $menu rofi
+    $fm nemo
+}
+
+
+# Stile e grafica
+font pango:JetBrains Mono 11
+default_border pixel 10
+default_floating_border pixel 10
+smart_borders off
+hide_edge_borders none
+focus_follows_mouse yes
+gaps inner 30px
+gaps outer -13px
+gaps left -23px
+#gaps inner 2px
+#gaps outer -2px
+
+#output * bg ~/pics/bg.png tile
+output * bg ~/pics/4k-rice-rp.png fill
+floating_modifier $mod normal
+
+
+# Questi bordi valgono solo per sway-borders!
+ border_images.focused ~/pics/viola.png
+ border_images.focused_inactive ~/pics/grigio.png
+ border_images.unfocused ~/pics/grigio.png
+ border_images.urgent ~/pics/viola.png
+
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #262626   #262626
+client.focused_inactive #44475A #44475A #F8F8F2 #262626   #262626
+client.unfocused        #282A36 #282A36 #BFBFBF #262626   #262626
+client.background       #262626
+
+
+# Input
+input type:keyboard {
+    xkb_layout it,us
+    xkb_options grp:rctrl_toggle
+}
+
+# Cambiare l'identificativo con quello del proprio touchpad con swaymsg -t get_inputsR
+input "1739:52710:DLL096D:01_06CB:CDE6_Touchpad" {
+	dwt enabled
+	tap enabled
+	natural_scroll enabled
+	middle_emulation enabled
+}
+
+input "76:613:Apple_Inc._Magic_Trackpad_2" {
+    accel_profile flat
+	tap enabled
+	natural_scroll enabled
+	middle_emulation enabled
+}
+
+
+# Tasti multimediali
+bindsym {
+    XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob 
+	XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob
+	XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.wob )
+	XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.wob
+	XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.wob
+}
+
+# Scorciatoie essenziali
+bindsym {    
+    $mod+Return exec $term    
+    $mod+Shift+Return exec $term --app-id="termfloat"
+    $mod+t exec $fm
+    $mod+space exec $menu -modi run -show run -drun-display-format {name} -theme dark
+    # Info stats e power-menu
+    $mod+i exec ~/script/noti.sh
+    $mod+Shift+e exec ~/script/rofi-power.sh
+    # Cambia workspace con la rotella del mouse sul bordo finestra
+    --border button5 workspace prev
+    --border button4 workspace next
+    # Screenshot e acchiappa colore
+    Print exec ~/script/sway-interactive-screenshot.sh
+    #$mod+Print exec wl-color-picker
+    $mod+Shift+q kill
+    $mod+Shift+c reload
+}
+    # Questa è momentanea, da togliere
+	 bindsym $mod+Print exec grim ~/pics/screen/1.png
+	    
+
+# Gestione finestre
+
+bindsym {
+    # Focus
+    $mod+Left focus left
+    $mod+Down focus down
+    $mod+Up focus up
+    $mod+Right focus right
+    # Muovere finestre
+    $mod+Shift+Left move left
+    $mod+Shift+Down move down
+    $mod+Shift+Up move up
+    $mod+Shift+Right move right
+    # Cambiare workspace
+    $mod+1 workspace number 1
+    $mod+2 workspace number 2
+    $mod+3 workspace number 3
+    $mod+4 workspace number 4
+    $mod+5 workspace number 5
+    $mod+6 workspace number 6
+    $mod+7 workspace number 7
+    $mod+8 workspace number 8
+    $mod+9 workspace number 9
+    $mod+0 workspace number 10
+    # Spostare finestre su workspace
+    $mod+Shift+1 move container to workspace number 1
+    $mod+Shift+2 move container to workspace number 2
+    $mod+Shift+3 move container to workspace number 3
+    $mod+Shift+4 move container to workspace number 4
+    $mod+Shift+5 move container to workspace number 5
+    $mod+Shift+6 move container to workspace number 6
+    $mod+Shift+7 move container to workspace number 7
+    $mod+Shift+8 move container to workspace number 8
+    $mod+Shift+9 move container to workspace number 9
+    $mod+Shift+0 move container to workspace number 10
+}
+
+# Gestione layout
+
+bindsym {
+    $mod+h splith
+    $mod+v splitv
+    $mod+e layout toggle split
+    $mod+f fullscreen
+    $mod+Tab focus mode_toggle
+    # Rende la finestra floating, piccola e centrata
+    $mod+Shift+space floating toggle, resize set width 1200 px height 600px
+    # Rende la finestra floating, grande e allineata
+    $mod+Shift+Control+space floating toggle, resize set width 1783 px height 946px, move position 53 70
+}
+
+
+# Dimensione finestre
+
+mode "resize" {
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# Qualche regola sulle finestre
+for_window {
+	[app_id="blueman-manager"] floating enable, resize set width 900 px height 400 px
+	[app_id="termfloat"] floating enable, resize set width 1200 px height 600 px
+	[app_id="mednaffe"] floating enable, resize set width 1200 px height 600 px
+	[app_id="pavucontrol"] floating enable, resize set width 1200 px height 600 px
+	[app_id="telegramdesktop"] resize set width 27 ppt 
+	[title="(?:Open|Save) (?:File|Folder|As)"] floating enable; sticky enable
+	[app_id="firefox"] inhibit_idle fullscreen
+	[window_role="pop-up"] floating enable
+	[window_role="bubble"] floating enable
+	[window_role="dialog"] floating enable
+	[window_type="dialog"] floating enable
+}
+
+# Avvio programmi
+exec swayidle -w \
+          timeout 300 'swaylock -f -c 000000' \
+          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f -c 000000'
+
+exec_always {
+	systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+	hash dbus-update-activation-environment 2>/dev/null && \
+    dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    gsettings set org.gnome.desktop.interface gtk-theme Dracula-rp
+    gsettings set org.gnome.desktop.interface icon-theme Faded-Originals-Icons-purple-dark
+    gsettings set org.gnome.desktop.interface cursor-theme Adwaita
+    gsettings set org.gnome.desktop.interface font-name JetBrains Mono
+    gsettings set $schema gtk-application-prefer-dark-theme true
+    # Gesture per cambiare workspace con swipe 3 dita
+	libinput-gestures-setup restart
+    # Necessario per wob (vedi tasti multimediali)
+	rm -f $SWAYSOCK.wob && mkfifo $SWAYSOCK.wob && tail -f $SWAYSOCK.wob | wob --background-color='#262626ff'	
+}
+
+exec {
+	/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+	~/script/noti.sh
+    # Il logo di pressappoco in basso a destra (da rendere più utile)
+	#nwg-wrapper -t logo.pango -c logo.css -p right -mr 50 -mb 50 -j right -a end
+	#mako
+    # Per notificare la batteria bassa
+	batsignal -n BAT0 -f 95 -m 180 -b -e
+	# Numero workspace in notifica (da rivedere)
+    #python3 ~/script/workspace.sh
+    waybar
+}
+
+include /etc/sway/config.d/*

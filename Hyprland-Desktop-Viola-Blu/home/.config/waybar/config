@@ -1,0 +1,219 @@
+//
+// Riccardo Palombo - https://riccardo.im
+// Preparato per la community Patreon: patreon.com/riccardopalombo
+//
+{
+    "layer": "top", // Waybar at top layer
+//    "output": "DP-3",
+//		"mode": "overlay",
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 28, // Waybar height (to be removed for auto height)
+    //"width": 1480, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+//        "custom/lock",
+       "wlr/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "temperature",
+        // "backlight",
+        		"idle_inhibitor",
+        "custom/gammastep",
+//        "pulseaudio",
+//        "pulseaudio#mic",
+        "bluetooth",
+        "network",
+        "battery"
+    ],
+    // Modules configuration
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "ACTIVATED",
+            "deactivated": "DEACTIVATED"
+        }
+    },
+    "wlr/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+//        "on-scroll-up": "hyprctl dispatch workspace e+1",
+//    	"on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "[{:%A %d %B, %H:%M}]",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 2,
+                    //"weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#fffffe'><b>{}</b></span>",
+                              "days":       "<span color='#efefef'><b>{}</b></span>",
+                              //"weeks":      "<span color='#999999'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff0000'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+    "cpu": {
+        "format": "[CPU {usage}%",
+        "tooltip": false,
+        "on-click": "footclient --override=colors.background=000000 --title=fly-foot-tiled htop"
+    },
+    "memory": {
+        "format": "RAM {}%",
+    },
+    "bluetooth": {
+        "format": "",
+		"format-off": "",
+        "format-disabled": "", // an empty format will hide the module
+        "format-connected": "",
+        "tooltip-format": "{status}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager",
+        "on-click-right": "bluetoothctl power on"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C",
+        "format": "TMP {temperatureC}°C]",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "tooltip": false,
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon}",
+		"format-icons": ["", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 15,
+            "critical": 5
+        },
+        "format": "{icon}",
+        "format-charging": "",
+        "format-plugged": "",
+        "format-alt": "{power}W",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{power}W - {capacity}%",
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "tooltip-format": "{ipaddr} - {signalStrength}%",
+        "format": "",
+        "format-wifi": "",
+        "format-disconnected": "",
+        //"interface": "enp6s0", // (Optional) To force the use of this interface
+        //"format-wifi": "{essid} ({signalStrength}%) ",
+        //"format-ethernet": "{ipaddr}/{cidr} ",
+        //"tooltip-format": "{ifname} via {gwaddr} ",
+        //"format-linked": "{ifname} (No IP) ",
+        //"format-connected": "⚠",
+        //"format-disconnected": "⚠",
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+        "pulseaudio#mic": {
+        "scroll-step": 10, // %, can be a float
+        "format": "{format_source}",
+        "format-bluetooth": "{icon}",
+        //"format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "tooltip": false
+        },
+
+    "pulseaudio": {
+        "scroll-step": 10, // %, can be a float
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        //"format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+        },
+    "custom/gammastep": {
+        "format": "{}",
+        "tooltip": false,
+        "interval": 5,
+        "on-update": "",
+        "exec": "sleep 0.05; $HOME/scripts/gammastep.sh",
+        "on-click": "bash $HOME/scripts/gammastep.sh toggle"
+    },
+    "custom/lock": {
+        "format": "",
+        "on-click": "swaylock -c 000000 --ring-color 3b05a6 --font Terminus",
+        "tooltip": false
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    }
+}

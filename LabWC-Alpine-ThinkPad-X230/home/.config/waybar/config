@@ -1,0 +1,182 @@
+{
+     "layer": "top", // Waybar at top layer
+     "position": "bottom", // Waybar position (top|bottom|left|right)
+	//"mode":	"dock",
+    "height": 27, // Waybar height (to be removed for auto height)
+    //"width": 1080, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+   // "exclusive": false,
+    // Choose the order of the modules
+    "modules-left": ["custom/write", "wlr/taskbar"],
+    "modules-center": ["clock"],
+    "modules-right": [ "custom/gammastep", "idle_inhibitor", "bluetooth", "network", "battery"],
+    
+    // Modules configuration
+  "wlr/taskbar": {
+    "format": "{name}",
+    "icon-size": 8,
+    "icon-theme": "Haiku",
+        "on-click": "minimize-raise",
+        "on-click-middle": "close",
+         "ignore-list": [
+       		 "foot"
+     ],
+        "rewrite": {
+                   "Firefox": "",
+                   "File Manager PCManFM": "",
+                   "Code - OSS - URL Handler": "",
+                   "Character Map": "",
+                   "Qt5 Settings": "",
+                   "Customize Look and Feel": "",
+                   "PulseAudio Volume Control": "",
+                   "mpv Media Player": ""
+
+               }   
+    },
+
+    "custom/command": {
+      "format": "RUN  <span color='#666'>::</span>  ",
+//		"format": "RUN",
+        "on-click-right": "$HOME/.config/scripts/tofi-power.sh",
+        "on-click": "tofi-drun",
+        "tooltip": false
+    },
+
+    "custom/write": {
+//      "format": "README  <span color='#666'>::</span>  ",
+		"format": "README  <span color='#666'>::</span>  ",
+ //       "on-click-right": "$HOME/.config/scripts/tofi-power.sh",
+        "on-click": "foot micro ~/README.sh",
+        "tooltip": false
+    },
+
+    "idle_inhibitor": {
+        "format": "IDLE  <span color='#666'>::</span>  ",
+    },
+    "clock": {
+        "format-alt": "<span text-transform='uppercase'>{:%H:%M}</span>",
+        "format": "<span text-transform='uppercase'>{:%a %d %b<span color='#666'>,</span> %H:%M}</span>",
+//        "format": "{:%H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 2,
+                    //"weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#fffffe'><b>{}</b></span>",
+                              "days":       "<span color='#efefef'><b>{}</b></span>",
+                              //"weeks":      "<span color='#999999'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff0000'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+ "bluetooth": {
+        "format": "BLUETOOTH  <span color='#666'>::</span>  ",
+        //"format-disabled": "BLT [DOWN]  <span color='#666'>::</span>  ", // an empty format will hide the module
+        //"format-connected": "BLT [ON]  <span color='#666'>::</span>  ",
+        "tooltip-format": "{status}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "bluetoothctl power on",
+        "on-click-right": "bluetoothctl power off"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 15,
+            "critical": 5
+        },
+        "format": "BAT [{capacity}%]",
+        "format-charging": "BAT +{capacity}%",
+        "format-plugged": "BAT +{capacity}%",
+        "format-alt": "{power}W",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{power}W - {capacity}%"
+
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+        "custom/gammastep": {
+        "format": "{}  <span color='#666'>::</span>  ",
+        "tooltip": false,
+        "interval": 10,
+        "on-update": "",
+        "exec": "sleep 0.05; $HOME/.config/scripts/gammastep.sh",
+        "on-click": "bash $HOME/.config/scripts/gammastep.sh toggle"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "ONLINE  <span color='#666'>::</span>  ",
+        //"format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{essid} [{signalStrength}%] - {ipaddr}",
+        //"format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "OFFLINE  <span color='#666'>::</span>  ",
+        //"format-alt": "{ipaddr} [{signalStrength}%]  <span color='#666'>::</span>  ",
+        "on-click-right": "foot nmtui"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}
+

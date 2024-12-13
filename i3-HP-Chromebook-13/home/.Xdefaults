@@ -1,0 +1,62 @@
+! Riccardo Palombo - https://riccardo.im
+! Preparato per la community Patreon: patreon.com/riccardopalombo
+
+
+! special
+*.foreground:   #f9f9f9
+*.background:   #262626
+*.cursorColor:  #919191
+
+! black
+*.color0:       #000000
+*.color8:       #5e5e5e
+
+! red
+*.color1:       #a13a38
+*.color9:       #ffa59a
+
+! green
+*.color2:       #00715d
+*.color10:      #24dfc4
+
+! yellow
+*.color3:       #006f32
+*.color11:      #73db95
+
+! blue
+*.color4:       #a43261
+*.color12:      #ff9fc9
+
+! magenta
+*.color5:       #913e88
+*.color13:      #ffa7f6
+
+! cyan
+*.color6:       #007086
+*.color14:      #00ddf4
+
+! white
+*.color7:       #ffffff
+*.color15:      #ffffff
+
+URxvt.scrollBar: false
+URxvt.internalBorder: 80
+URxvt.font: xft:mplus Nerd Font Mono:size=11,xft:Monospace:size=11:antialias=true:hinting=true
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+URxvt.depth: 32
+URxvt.iso14755: false
+URxvt.clipboard.autocopy: true
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+Xft.dpi: 192
+Xft.autohint: 1
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+Xcursor.size: 48
+rofi.dpi: 192

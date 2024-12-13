@@ -1,0 +1,128 @@
+{
+  "layer": "top",
+  "position": "left",
+  "width": 36,
+  "height": 1200,
+
+  "modules-left": ["custom/poweroff", "sway/language"],
+  "modules-center": ["sway/workspaces"],
+  "modules-right": ["network", "pulseaudio", "custom/gammastep", "battery", "clock", "clock#min"],
+"sway/window": {
+    "format": "{}",
+    "rotate": 90,
+    "max-length": 150,
+    "rewrite": {
+       "(.*) - Mozilla Firefox": "$1",
+       "(.*) - zsh": " [$1]"
+    }
+},
+  "sway/mode": {
+    "tooltip": true,
+    "format": "<span weight=\"bold\">{}</span>",
+    "rotate": 360
+  },
+  "sway/workspaces": {
+    "disable-scroll": false,
+    "active-only": true,
+    "all-outputs": true,
+    "format": "{name}",
+    "persistent_workspaces": {
+    			"1": [],
+    			"2": [],
+    			"3": [],
+    			"4": [],
+    			"5": []
+    		}
+
+  },
+  "network": {
+    "tooltip-format": "{ipaddr}",
+	"format": "{icon}",
+    "format-wifi": "",
+    "format-disconnected": "OFF",
+    "rotate": 360
+  },
+  "memory": {
+    "interval": 10,
+    "format": "{percentage}%",
+    "states": {
+      "ok": 80,
+      "heavy": 100
+    },
+    "format-alt": "頃",
+    "max-length": 10,
+    "rotate": 360
+  },
+  "cpu": {
+    "interval": 5,
+    "tooltip": false,
+    "states": {
+        "ok": 80,
+	"heavy": 100
+    },
+    "format": "{usage}%",
+    "rotate": 360
+  },
+  "clock": {
+    "tooltip-format": "{:%D, %A}",
+    "format": "{:%H}",
+    "rotate": 360
+  },
+    "clock#min": {
+    "tooltip-format": "{:%D, %A}",
+    "format": "{:%M}",
+    "rotate": 360
+  },
+  "tray": {
+    "tooltip": false,
+    "spacing": 0
+  },
+  "battery": {
+      "bat": "BAT0",
+      "interval": 60,
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "format": "{icon}",
+      "format-charging": "",
+      "tooltip-format": "{capacity}%",
+      "format-icons": ["", "", "", "", ""],
+      "max-length": 25
+  },
+	"custom/poweroff": {
+       "tooltip": false,
+       "format": "",
+       "on-click": "bash $HOME/script/rofi-power.sh"
+  },
+   "custom/gammastep": {
+         "format": "{}",
+         "tooltip": false,
+         "interval": 5,
+         "on-update": "",
+         "exec": "sleep 0.05; $HOME/script/gammastep.sh",
+         "on-click": "bash $HOME/script/gammastep.sh toggle"
+  },
+    "sway/language": {
+        "format": "{}",
+        "tooltip": false,
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+          },
+  "pulseaudio": {
+      "format": "{icon}",
+      "tooltip": false,
+      "format-bluetooth": "{icon}",
+      "format-muted": "",
+      "format-icons": {
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", "",]
+      },
+      "scroll-step": 10,
+      "on-click": "pavucontrol"
+  }
+}
