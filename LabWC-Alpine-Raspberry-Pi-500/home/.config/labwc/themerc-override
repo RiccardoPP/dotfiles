@@ -1,0 +1,106 @@
+# This file contains all themerc options with default values
+#
+# System-wide and local themes can be overridden by creating a copy of this
+# file and renaming it to $HOME/.config/labwc/themerc-override. Be careful
+# though - if you only want to override a small number of specific options,
+# make sure all other lines are commented out or deleted.
+
+# general
+border.width: 4
+#padding.height: 3
+
+# ToggleKeybinds status indicator
+#window.active.indicator.toggled-keybind.color: #ff0000
+
+#
+# The global padding.{width,height} of openbox are not supported because
+# the default labwc button geometry deviates from that of openbox
+#
+window.titlebar.padding.width: 0
+window.titlebar.padding.height: 0
+
+# window border
+window.active.border.color: #281733
+window.inactive.border.color: #281733
+
+# window titlebar background
+window.active.title.bg.color: #281733
+window.inactive.title.bg.color: #fffacd
+
+# window titlebar text
+window.active.label.text.color: #ffcd1c
+window.inactive.label.text.color: #333333
+window.label.text.justify: left
+
+# window button width and spacing
+window.button.width: 18
+window.button.height: 22
+window.button.spacing: 2
+
+# window button hover effect
+#window.button.hover.bg.corner-radius: 0
+
+# window buttons
+ window.active.button.unpressed.image.color: #dbbfef
+ window.inactive.button.unpressed.image.color: #333333
+
+# Note that "menu", "iconify", "max", "close" buttons colors can be defined
+# individually by inserting the type after the button node, for example:
+#
+#     window.active.button.iconify.unpressed.image.color: #333333
+
+# menu
+# menu.border.width: 2
+# menu.border.color: #000000
+# menu.overlap.x: 0
+# menu.overlap.y: 0
+# menu.width.min: 20
+# menu.width.max: 200
+ menu.items.bg.color: #22AA99
+ menu.items.text.color: #000000
+ menu.items.active.bg.color: #22AA99
+ menu.items.active.text.color: #FFFACD
+# menu.items.padding.x: 7
+# menu.items.padding.y: 4
+# menu.separator.width: 1
+# menu.separator.padding.width: 6
+# menu.separator.padding.height: 3
+ menu.separator.color: #FFFACD
+ # menu.title.bg.color: #589bda
+ # menu.title.text.color: #ffffff
+ # menu.title.text.justify: Center
+
+
+# on screen display (window-cycle dialog)
+ osd.bg.color: #FFFACD
+ osd.border.color: #000000
+ osd.border.width: 1
+ osd.label.text.color: #000000
+  osd.window-switcher.preview.border.width: 4
+ osd.window-switcher.preview.border.color: #FFCD1C
+
+
+# window drop-shadows
+window.active.shadow.size: 60
+window.inactive.shadow.size: 40
+window.active.shadow.color: #00000060
+window.inactive.shadow.color: #00000040
+
+# Default values for following options change depending on the rendering
+# backend. For software-based renderers, *.bg.enabled is "no" and
+# *.border.enabled is "yes" if not set. For hardware-based renderers,
+# *.bg.enabled is "yes" and *.border.enabled is "no" if not set.
+# Setting *.bg.enabled to "yes" for software-based renderer with translucent
+# background color may severely impact performance.
+#
+# snapping.overlay.region.bg.enabled:
+# snapping.overlay.edge.bg.enabled:
+# snapping.overlay.region.border.enabled:
+# snapping.overlay.edge.border.enabled:
+
+snapping.overlay.region.bg.color: #8080b380
+snapping.overlay.edge.bg.color: #8080b380
+snapping.overlay.region.border.width: 2
+snapping.overlay.edge.border.width: 1
+snapping.overlay.region.border.color: #dddda6,#000000,#dddda6
+snapping.overlay.edge.border.color: #dddda6,#000000,#dddda6

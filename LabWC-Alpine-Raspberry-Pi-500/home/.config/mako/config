@@ -1,0 +1,21 @@
+sort=-time
+layer=overlay
+background-color=#FFFACD
+text-color=#000000
+width=120
+#height=50
+outer-margin=4,4
+padding=4
+border-size=1
+border-color=#000000
+border-radius=0
+icons=0
+default-timeout=3000
+font=Misc Ohsnap 9
+text-alignment=center
+
+[urgency=high]
+border-color=#000000
+background-color=#FF0000
+text-color=#000000
+default-timeout=8000
