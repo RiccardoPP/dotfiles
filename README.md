@@ -2,6 +2,11 @@
 
 Here's all my dotfiles. A README with some general instructions is included in every directories. Have fun with Linux!
 
+## LabWC - ASUS Chromebook Plus
+[Go to files](LabWC-Chromebook-Plus)
+
+[![LabWC ASUS Chromebook Plus Video](https://img.youtube.com/vi/9bIt-mvfhSI/0.jpg)](https://youtu.be/9bIt-mvfhSI)
+
 ## LabWC - Raspberry Pi 500
 [Go to files](LabWC-Alpine-Raspberry-Pi-500)
 
