@@ -11,7 +11,9 @@ Foot
 Firefox
 Nemo
 Iosevka Fonts
+Tofi
 libinput-gestures
+pcmanfm-qt (per le icone sul desktop)
 
 # Fonts, tema e icone
 mkdir ~/.icons ~/.fonts ~/.themes
