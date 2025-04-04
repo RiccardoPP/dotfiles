@@ -1,0 +1,264 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Misc Ohsnap, "Misc Ohsnap.Icons";
+    font-size: 14px; 
+    padding:0;
+    margin:0;
+}
+
+window#waybar {
+    /* background-color: #e4e4de; */
+    background-color: #000;
+    /* border-top: 1px solid #FFFFFF; */
+    border: none;
+    color: #FFF;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+
+/* #battery, */
+/* #cpu, */
+/* #memory, */
+/* #disk, */
+/* #temperature, */
+/* #backlight, */
+/* #network, */
+/* #pulseaudio, */
+/* #wireplumber, */
+/* #custom-media, */
+/* #tray, */
+/* #mode, */
+/* #idle_inhibitor, */
+/* #scratchpad, */
+/* #mpd { */
+    /* padding: 0; */
+    /* color: #000000; */
+/* } */
+/*  */
+
+#clock {
+	padding-bottom: 2px;
+	font-weight: bold;
+}
+
+#bluetooth, #idle_inhibitor {
+	margin-bottom: 20px;
+}
+
+#taskbar {
+	margin-top: 30px;
+}
+#taskbar button {
+	border: 1px solid gray;
+	padding: 6px 0 0 0;
+	background: lightgray;
+	margin-bottom: 2px;
+}
+
+/* #taskbar button { */
+	/* padding: 0 6px; */
+/* } */
+/*  */
+ #taskbar button.active { 
+	background: #fff;
+ } 
+/*  */
+/* #taskbar button.minimized { */
+	 /* color: grey; */
+ /* } */
+
+/* If workspaces is the leftmost module, omit left margin */
+ .modules-left { 
+     margin: 20px 20px 0 20px;   
+ } 
+ .modules-right { 
+     margin: 0 20px 20px 20px;   
+ } 
+
+
+/* .modules-right { */ 
+    /* margin-right: 20px; */ 
+    /* margin-bottom: 20px; */ 
+/* } */ 
+
+/* #custom-wpNext { */
+/* margin-left: 5px */
+/* } */
+
+/* #battery { */
+    /* color: #000000; */
+/* } */
+
+/* #battery.charging, #battery.plugged { */
+    /* color: #ffffff; */
+    /* background-color: #26A65B; */
+/* } */
+
+@keyframes blink {
+    to {
+        /* background-color: #ffffff; */
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    /* background-color: #f53c3c; */
+    color: red;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    background-color: #2ecc71;
+    color: #000000;
+}
+
+/* #battery { */
+    /* background-color: #9b59b6; */
+/* } */
+/*  */
+/* #bluetooth { */
+    /* background-color: #964B00; */
+/* } */
+/*  */
+/* #network { */
+    /* background-color: #90b1b1; */
+    /* margin-bottom: 10px; */
+/* } */
+
+/* #bluetooth, #battery, #network { */
+    /* background-color: #000; */
+    /* color: #FFF; */
+/* } */
+
+
+/* #network { */
+    /* color: #000000; */
+/* } */
+
+/* #network.disconnected, #bluetooth.disabled { */
+    /* color: gray; */
+/* } */
+
+#pulseaudio {
+    background-color: #f1c40f;
+    color: #000000;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+
+#wireplumber {
+    background-color: #fff0f5;
+    color: #000000;
+}
+
+#wireplumber.muted {
+    background-color: #f53c3c;
+}
+
+#custom-media {
+    background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+    background-color: #ffa000;
+}
+
+#temperature {
+    background-color: #f0932b;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#tray {
+    background-color: #2980b9;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+/* #idle_inhibitor { */
+    /* background-color: #2d3436; */
+/* } */
+
+ #idle_inhibitor.activated { 
+    color: #999;
+ } 
+
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}

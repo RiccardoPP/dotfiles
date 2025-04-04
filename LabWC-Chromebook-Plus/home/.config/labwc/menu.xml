@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+<menu id="root-menu" label="root-menu">
+		<item label="Logout">
+			<action name="Execute"><command>labwc --exit</command></action>
+		</item>
+		<item label="Suspend">
+			<action name="Execute"><command>systemctl suspend</command></action>
+		</item>
+		<item label="Restart">
+			<action name="Execute"><command>systemctl reboot</command></action>
+		</item>
+		<item label="Shutdown">
+			<action name="Execute"><command>systemctl poweroff</command></action>
+		</item>
+	<separator/>
+	<menu id="Power" label="Tool">
+		<item label="File">
+			<action name="Execute"><command>nemo</command></action>
+		</item>
+		<item label="E-Mail">
+			<action name="Execute"><command>sylpheed</command></action>
+		</item>
+		<item label="Browser">
+			<action name="Execute"><command>firefox</command></action>
+		</item>
+		<item label="Terminal">
+			<action name="Execute"><command>foot</command></action>
+		</item>
+	</menu>
+ <!-- Other -->
+		<separator/>
+
+	<menu id="Vpn" label="VPN">
+	<item label="Connect">
+		<action name="Execute"><command>nmcli connection up us2950.nordvpn.com.udp</command></action>
+	</item>
+	<item label="Disconnect">
+		<action name="Execute"><command>nmcli connection down us2950.nordvpn.com.udp</command></action>
+	</item>
+	<item label="Network Manager Config">
+		<action name="Execute"><command>nm-connection-editor</command></action>
+	</item>
+	</menu>
+</menu> <!-- root-menu -->
+</openbox_menu>
