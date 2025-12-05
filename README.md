@@ -2,6 +2,12 @@
 
 Here's all my dotfiles. A README with some general instructions is included in every directories. Have fun with Linux!
 
+## LabWC - Lenovo H50
+[Go to files](LabWC-1280x1024-H50)
+
+[![LabWC Lenovo H50 Video](LabWC-1280x1024-H50/screen.png)](https://youtu.be/zsdxXwmFOOA)
+
+
 ## LabWC - ASUS Chromebook Plus
 [Go to files](LabWC-Chromebook-Plus)
 
