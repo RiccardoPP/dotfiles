@@ -1,0 +1,24 @@
+# -*- conf -*-
+# Monokai Stone
+
+[colors]
+cursor=6F44F0 ffffff
+#background=2A2D33
+background=3b224c
+foreground=a4a0e8
+regular0=403E41
+regular1=FF6188
+regular2=A9DC76
+regular3=FFD866
+regular4=FC9867
+regular5=AB9DF2
+regular6=78DCE8
+regular7=FCFCFA
+bright0=727072
+bright1=FF6188
+bright2=A9DC76
+bright3=FFD866
+bright4=FC9867
+bright5=AB9DF2
+bright6=78DCE8
+bright7=FCFCFA

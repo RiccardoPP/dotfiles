@@ -1,0 +1,36 @@
+## Riccardo Palombo - email at riccardo dot im
+##
+
+# Ideale per schermi 1280x1024 (o di poco superiori).
+# Basata su Arch Linux o distro con systemd.
+
+# Pacchetti essenziali
+Labwc
+Waybar
+Foot
+Firefox
+Nemo
+Tofi
+Mako
+Nwg-Look
+QT6CT
+
+# Fonts, tema e icone
+mkdir ~/.icons ~/.fonts ~/.themes
+unzip ohsnap.zip -d ~/.fonts/
+tar xvfz Haiku.gz -C ~/.icons/
+tar xvfz capitaine-cursors-light-r4.tar.gz -C ~/.icons/
+tar xvf WhiteSur-Light.tar.xz -C ~/.themes/
+
+# Copiare i dots
+cp -r home/. /home/$USER
+
+# Correggere i permessi degli scripts
+chmod +x ~/.config/scripts/*
+
+# Selezionare icone, font, ecc
+Aprire Nwg-Look e QT6CT e selezionare le impostazioni desiderate.
+
+sudo reboot
+
+Happy Linux!

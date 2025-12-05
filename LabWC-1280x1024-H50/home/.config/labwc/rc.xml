@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+
+<labwc_config>
+  <core>
+    <decoration>server</decoration>
+    <gap>8</gap>
+    <adaptiveSync>no</adaptiveSync>
+    <allowTearing>no</allowTearing>
+    <autoEnableOutputs>yes</autoEnableOutputs>
+    <reuseOutputMode>no</reuseOutputMode>
+    <xwaylandPersistence>no</xwaylandPersistence>
+    <primarySelection>yes</primarySelection>
+  </core>
+
+  <placement>
+    <policy>cascade</policy>
+    <cascadeOffset x="40" y="30"/>
+  </placement>
+  
+  <!-- <margin top="4" bottom="4" left="4" right="4" output=""/> -->
+
+  <theme>
+    <name>WhiteSur-Light</name>
+    <icon>Haiku</icon>
+    <fallbackAppIcon>labwc</fallbackAppIcon>
+    <titlebar>
+      <!-- layout>icon:iconify,max,close</layout -->
+      <layout>desk:iconify,max,close</layout>
+      <showTitle>yes</showTitle>
+    </titlebar>    
+    <cornerRadius>0</cornerRadius>
+    <keepBorder>yes</keepBorder>
+    <dropShadows>no</dropShadows>
+    <dropShadowsOnTiled>no</dropShadowsOnTiled>
+    
+    <font place="ActiveWindow">
+      <name>Misc OhSnap</name>
+      <size>11</size>
+      <slant>normal</slant>
+      <weight>bold</weight>
+    </font>
+    <font place="InActiveWindow">
+      <name>Misc OhSnap</name>
+      <size>11</size>
+      <slant>normal</slant>
+      <weight>bold</weight>
+    </font>
+
+    <font place="MenuItem">
+	   <name>Misc OhSnap</name>
+       <size>11</size>
+       <slant>normal</slant>
+      <weight>bold</weight>
+    </font>
+    <font place="OnScreenDisplay">
+		<name>Misc OhSnap</name>
+        <size>11</size>
+      <slant>normal</slant>
+      <weight>bold</weight>
+    </font>
+  </theme>
+  
+  <windowSwitcher show="yes" style="thumbnail" preview="no" outlines="no" allWorkspaces="yes">
+    <osd show="yes" style="thumbnail" output="all" thumbnailLabelFormat="%T" />
+    <fields>
+      <field content="workspace" width="25%"/>
+      <field content="trimmed_identifier" width="20%"/>
+      <field content="title" width="55%"/>
+      <!-- field content="type_short" width="5%"/-->
+    </fields>
+  </windowSwitcher>
+  
+  <resistance>
+    <screenEdgeStrength>20</screenEdgeStrength>
+    <windowEdgeStrength>20</windowEdgeStrength>
+   <unSnapThreshold>20</unSnapThreshold>
+   <unMaximizeThreshold>150</unMaximizeThreshold>
+  </resistance>
+  
+  <resize>
+    <popupShow>Always</popupShow>
+    <drawContents>no</drawContents>
+    <minimumArea>8</minimumArea>
+  </resize>
+    
+  <focus>
+    <followMouse>yes</followMouse>
+    <followMouseRequiresMovement>yes</followMouseRequiresMovement>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+
+  <snapping>
+    <!-- Set range to 0 to disable window snapping completely -->
+    <range>10</range>
+    <cornerRange>50</cornerRange>
+    <overlay enabled="yes">
+      <delay inner="500" outer="500" />
+    </overlay>
+    <topMaximize>no</topMaximize>
+    <notifyClient>always</notifyClient>
+  </snapping>
+
+    <!-- <desktops> -->
+    <!--       <popupTime>1000</popupTime>E -->
+    <!--   <names> -->
+    <!--     <name>1</name> -->
+    <!--     <name>2</name> -->
+    <!--     <name>3</name> -->
+    <!--     <name>4</name> -->
+    <!--   </names> -->
+    <!-- </desktops> -->
+  
+  <!--
+    Workspaces can be configured like this:
+    <desktops>
+      <popupTime>1000</popupTime>
+      <names>
+        <name>Workspace 1</name>
+        <name>Workspace 2</name>
+        <name>Workspace 3</name>
+        <name>Workspace 4</name>
+      </names>
+    </desktops>
+
+    Or it can also be configured like this:
+    <desktops number="4" />
+
+    popupTime defaults to 1000 so could be left out.
+    Set to 0 to completely disable the workspace OSD.
+
+    Use GoToDesktop left | right to switch workspaces.
+    Use SendToDesktop left | right to move windows.
+    See man labwc-actions for further information.
+  
+  <desktops>
+    <popupTime>1000</popupTime>
+    <names>
+      <name>Default</name>
+    </names>
+  </desktops>
+-->
+  <desktops number="4"/>
+  <!--
+    <margin> can be used to reserve space where new/maximized/tiled
+    windows will not be placed. Clients using layer-shell protocol reserve
+    space automatically, so <margin> is only intended for other, specialist
+    cases.
+
+    If output is left empty, the margin will be applied to all outputs.
+
+    <margin top="" bottom="" left="" right="" output="" />
+  -->
+  <!-- Percent based regions based on output usable area, % char is required -->
+  <!--
+    <regions>
+      <region name="top-left"     x="0%"  y="0%"  height="50%"  width="50%"  />
+      <region name="top"          x="0%"  y="0%"  height="50%"  width="100%" />
+      <region name="top-right"    x="50%" y="0%"  height="50%"  width="50%"  />
+      <region name="left"         x="0%"  y="0%"  height="100%" width="50%"  />
+      <region name="center"       x="10%" y="10%" height="80%"  width="80%"  />
+      <region name="right"        x="50%" y="0%"  height="100%" width="50%"  />
+      <region name="bottom-left"  x="0%"  y="50%" height="50%"  width="50%"  />
+      <region name="bottom"       x="0%"  y="50%" height="50%"  width="100%" />
+      <region name="bottom-right" x="50%" y="50%" height="50%"  width="50%"  />
+    </regions>
+  -->
+  <regions>
+    <region name="top-left" x="0%" y="0%" height="50%" width="50%"/>
+    <region name="top" x="0%" y="0%" height="60%" width="100%"/>
+    <region name="top-right" x="50%" y="0%" height="50%" width="50%"/>
+    <region name="left" x="0%" y="0%" height="100%" width="75%"/>
+    <region name="center" x="17%" y="17%" height="66%" width="66%"/>
+    <region name="center-big" x="0%" y="0%" height="100%" width="100%"/>
+    <region name="right" x="75%" y="0%" height="100%" width="25%"/>
+    <region name="bottom-left" x="0%" y="50%" height="50%" width="50%"/>
+    <region name="bottom" x="0%" y="60%" height="40%" width="100%"/>
+    <region name="bottom-right" x="50%" y="50%" height="50%" width="50%"/>
+  </regions>
+  <!--
+    Keybind actions are specified in labwc-actions(5)
+    The following keybind modifiers are supported:
+      W - window/super/logo
+      A - alt
+      C - ctrl
+      S - shift
+
+    Use <keyboard><default /> to load all the default keybinds (those listed
+    below). If the default keybinds are largely what you want, a sensible
+    approach could be to start the <keyboard> section with a <default />
+    element, and then (re-)define any special binds you need such as launching
+    your favourite terminal or application launcher. See rc.xml for an example.
+  -->
+  <keyboard>
+    <numlock>off</numlock>
+    <layoutScope>global</layoutScope>
+    <repeatRate>25</repeatRate>
+    <repeatDelay>600</repeatDelay>
+    <keybind key="W-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="W-Return">
+      <action name="Execute" command="foot"/>
+    </keybind>
+    <keybind key="W-S-Return">
+      <action name="Execute" command="foot --override=colors.background=000000 --override=colors.foreground=ffffff"/>
+    </keybind>
+    <keybind key="W-Space">
+      <action name="Execute" command="tofi-drun"/>
+    </keybind>
+    <keybind key="W-S-q">
+      <action name="Close"/>
+    </keybind>
+    <!-- <keybind key="W-S-b"> -->
+    <!--   <action name="Execute" command="pkill -SIGUSR2 waybar"/> -->
+    <!-- </keybind> -->
+    <keybind key="W-C-r">
+      <action name="Execute" command="labwc -r"/>
+    </keybind>
+    <keybind key="W-S-e">
+      <action name="Execute" command="~/.config/scripts/tofi-power.sh"/>
+    </keybind>
+    <!-- <keybind key="W-a"> -->
+    <!--   <action name="ToggleMaximize"/> -->
+    <!-- </keybind> -->
+    <keybind key="W-f">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+    
+    <keybind key="W-C-S-Left">
+		<action name="GrowToEdge" direction="left" />
+    </keybind>
+    <keybind key="W-C-S-Right">
+		<action name="GrowToEdge" direction="right" />
+    </keybind>
+    <keybind key="W-C-S-Up">
+		<action name="GrowToEdge" direction="up" />
+    </keybind>
+    <keybind key="W-C-S-Down">
+		<action name="GrowToEdge" direction="down" />
+    </keybind>
+
+    <keybind key="W-Left">
+      <action name="SnapToEdge" direction="left"/>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="SnapToEdge" direction="right"/>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="SnapToEdge" direction="up"/>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="SnapToEdge" direction="down"/>
+    </keybind>
+    <keybind key="W-1">
+      <action name="GoToDesktop" to="1"/>
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop" to="2"/>
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop" to="3"/>
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop" to="4"/>
+    </keybind>
+    <keybind key="W-S-1">
+      <action name="SendToDesktop" to="1" follow="yes"/>
+    </keybind>
+    <keybind key="W-S-2">
+      <action name="SendToDesktop" to="2" follow="yes"/>
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop" to="3" follow="yes"/>
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop" to="4" follow="yes"/>
+    </keybind>
+
+    <keybind key="W-C-Left">
+      <action name="GoToDesktop" to="left"/>
+    </keybind>
+    <keybind key="W-C-Right">
+      <action name="GoToDesktop" to="right"/>
+    </keybind>
+    <keybind key="XF86_AudioLowerVolume">
+      <action name="Execute" command="amixer sset Master 5%-"/>
+    </keybind>
+    <keybind key="XF86_AudioRaiseVolume">
+      <action name="Execute" command="amixer sset Master 5%+"/>
+    </keybind>
+    <keybind key="XF86_AudioMute">
+      <action name="Execute" command="amixer sset Master toggle"/>
+    </keybind>
+    <keybind key="XF86_MonBrightnessUp">
+      <action name="Execute" command="brightnessctl set +10%"/>
+    </keybind>
+    <keybind key="XF86_MonBrightnessDown">
+      <action name="Execute" command="brightnessctl set 10%-"/>
+    </keybind>    
+    <keybind key="Print">
+      <action name="Execute" command="grim -l 1"/>
+      <action name="Execute" command="notify-send 'Screenshot!'"/>
+    </keybind>
+    <keybind key="XF86FullScreen">
+		<action name="ToggleFullscreen"/>
+    </keybind>
+
+    <keybind key="W-S-Left">
+      <action name="SnapToRegion" region="top-left"/>
+    </keybind>
+    <keybind key="W-S-Up">
+      <action name="SnapToRegion" region="top-right"/>
+    </keybind>
+    <keybind key="W-S-l">
+      <action name="SnapToRegion" region="left"/>
+    </keybind>
+    <keybind key="W-S-c">
+      <action name="SnapToRegion" region="center"/>
+    </keybind>
+    <keybind key="W-S-a">
+      <action name="SnapToRegion" region="center-big"/>
+    </keybind>
+
+    <keybind key="W-S-r">
+      <action name="SnapToRegion" region="right"/>
+    </keybind>
+    <keybind key="W-S-Down">
+      <action name="SnapToRegion" region="bottom-left"/>
+    </keybind>
+    <keybind key="W-S-Right">
+      <action name="SnapToRegion" region="bottom-right"/>
+    </keybind>
+  </keyboard>
+  <!--
+    Multiple <mousebind> can exist within one <context>
+    Multiple <actions> can exist within one <mousebind>
+    Currently, the only openbox-action not supported is "Unshade"
+
+    Use <mouse><default /> to load all the default mousebinds (those listed
+    below). If the default mousebinds are largely what you want, a sensible
+    approach could be to start the <mouse> section with a <default />
+    element, and then (re-)define any special binds you need such as launching
+    a custom menu when right-clicking on your desktop. See rc.xml for an example.
+  -->
+  <mouse>
+    <!-- time is in ms -->
+    <doubleClickTime>500</doubleClickTime>
+
+    <context name="Frame">
+      <mousebind button="W-Left" action="Press">
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+      <mousebind button="W-Left" action="Drag">
+        <action name="Move" />
+      </mousebind>
+      <mousebind button="W-Right" action="Press">
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+      <mousebind button="W-Right" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+
+   <context name="Top">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+    <context name="Left">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+    <context name="Right">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+    <context name="Bottom">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+    <context name="TRCorner">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+    <context name="BRCorner">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+    <context name="TLCorner">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+    <context name="BLCorner">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+
+    <context name="TitleBar">
+      <mousebind button="Left" action="Press">
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+      <mousebind button="Right" action="Click">
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+      <mousebind direction="Up" action="Scroll">
+        <action name="Unshade" />
+        <action name="Focus" />
+      </mousebind>
+      <mousebind direction="Down" action="Scroll">
+        <action name="Unfocus" />
+        <action name="Shade" />
+      </mousebind>
+    </context>
+
+    <context name="Title">
+      <mousebind button="Left" action="Drag">
+        <action name="Move" />
+      </mousebind>
+      <mousebind button="Left" action="DoubleClick">
+       <action name="SnapToRegion" region="center-big"/>
+        <!-- <action name="ToggleMaximize" /> -->
+      </mousebind>
+      <mousebind button="Right" action="Click">
+        <action name="ShowMenu" menu="client-menu" />
+      </mousebind>
+      <mousebind button="Middle" action="Click">
+        <action name="Kill" />
+      </mousebind>
+    </context>
+
+    <context name="Maximize">
+      <mousebind button="Left" action="Click">
+        <action name="SnapToRegion" region="center-big"/>
+        <!-- <action name="ToggleMaximize" /> -->
+      </mousebind>
+      <!-- <mousebind button="Right" action="Click"> -->
+      <!--   <action name="ToggleMaximize" direction="horizontal" /> -->
+      <!-- </mousebind> -->
+      <!-- <mousebind button="Middle" action="Click"> -->
+      <!--   <action name="ToggleMaximize" direction="vertical" /> -->
+      <!-- </mousebind> -->
+    </context>
+
+    <context name="WindowMenu">
+      <mousebind button="Left" action="Click">
+        <action name="ShowMenu" menu="client-menu" atCursor="no" />
+      </mousebind>
+      <mousebind button="Right" action="Click">
+        <action name="ShowMenu" menu="client-menu" atCursor="no" />
+      </mousebind>
+    </context>
+
+    <context name="Icon">
+      <mousebind button="Left" action="Click">
+        <action name="ShowMenu" menu="client-menu" atCursor="no" />
+      </mousebind>
+      <mousebind button="Right" action="Click">
+        <action name="ShowMenu" menu="client-menu" atCursor="no" />
+      </mousebind>
+    </context>
+
+    <context name="Shade">
+      <mousebind button="Left" action="Click">
+        <action name="ToggleShade" />
+      </mousebind>
+    </context>
+
+    <context name="AllDesktops">
+      <mousebind button="Left" action="Click">
+        <action name="ToggleOmnipresent" />
+      </mousebind>
+    </context>
+
+    <context name="Iconify">
+      <mousebind button="Left" action="Click">
+        <action name="Iconify" />
+      </mousebind>
+    </context>
+
+    <context name="Close">
+      <mousebind button="Left" action="Click">
+        <action name="Close" />
+      </mousebind>
+    </context>
+
+    <context name="Client">
+      <mousebind button="Left" action="Press">
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+      <mousebind button="Middle" action="Press">
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+    </context>
+        
+    <context name="Root">
+      <!-- <mousebind button="Left" action="Press"> -->
+      <!--   <action name="ShowMenu" menu="root-menu" /> -->
+      <!-- </mousebind> -->
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="root-menu" />
+      </mousebind>
+      <!-- <mousebind button="Middle" action="Press"> -->
+      <!--   <action name="ShowMenu" menu="root-menu" /> -->
+      <!-- </mousebind> -->
+      <mousebind direction="Up" action="Scroll">
+        <action name="GoToDesktop" to="left" wrap="yes" />
+      </mousebind>
+      <mousebind direction="Down" action="Scroll">
+        <action name="GoToDesktop" to="right" wrap="yes" />
+      </mousebind>
+    </context>
+    
+  </mouse>
+  <!--
+    The *category* attribute is optional and can be set to touch, touchpad,
+    non-touch, default or the name of a device. You can obtain device names by
+    running *libinput list-devices* as root or member of the input group.
+
+    Tap is set to *yes* be default. All others are left blank in order to use
+    device defaults.
+
+    All values are [yes|no] except for:
+      - pointerSpeed [-1.0 to 1.0]
+      - accelProfile [flat|adaptive]
+      - tapButtonMap [lrm|lmr]
+  -->
+
+  <libinput>
+    <device category="default">
+    <naturalScroll></naturalScroll>
+    <leftHanded></leftHanded>
+    <pointerSpeed></pointerSpeed>
+    <accelProfile></accelProfile>
+    <tap>yes</tap>
+    <tapButtonMap></tapButtonMap>
+    <tapAndDrag></tapAndDrag>
+    <!-- dragLock>sticky</dragLock -->
+    <threeFingerDrag></threeFingerDrag>
+    <middleEmulation></middleEmulation>
+    <disableWhileTyping></disableWhileTyping>
+    <clickMethod></clickMethod>
+    <scrollMethod></scrollMethod>
+    <sendEventsMode></sendEventsMode>
+    <calibrationMatrix></calibrationMatrix>
+    <scrollFactor>1.0</scrollFactor>
+    </device>
+  </libinput>
+  
+	<windowRules>
+	<windowRule identifier="Firefox">
+	<action name="ToggleDecorations"/>
+	      <action name="SnapToRegion" region="center-big"/>
+	</windowRule>
+	<!-- <windowRule identifier="org.inkscape.org"> -->
+	<!-- <action name="SnapToRegion" region="center-big"/> -->
+	<!-- </windowRule> -->
+	<windowRule identifier="Zed">
+	<action name="ToggleDecorations"/>
+	<action name="SnapToRegion" region="center-big"/>
+	</windowRule>
+	</windowRules>
+  <menu>
+    <ignoreButtonReleasePeriod>250</ignoreButtonReleasePeriod>
+     <showIcons>no</showIcons>
+  </menu>
+
+  <!--
+    Magnifier settings
+    'width' sets the width in pixels of the magnifier window.
+    'height' sets the height in pixels of the magnifier window.
+    'initScale' sets the initial magnification factor at boot.
+    'increment' sets the amount by which the magnification factor
+      changes when 'ZoomIn' or 'ZoomOut' are called.
+    'useFilter' sets whether to use a bilinear filter on the magnified
+      output or simply to take nearest pixel.
+  
+  <magnifier>
+    <width>400</width>
+    <height>400</height>
+    <initScale>2.0</initScale>
+    <increment>0.2</increment>
+    <useFilter>true</useFilter>
+  </magnifier>
+ -->
+</labwc_config>

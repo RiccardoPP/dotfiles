@@ -1,0 +1,32 @@
+#
+#
+# Riccardo Palombo - https://riccardo.im
+#
+
+# LabWC autostart file
+
+# Faster startup for GTK apps
+dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY > /dev/null 2>&1 &
+
+# Green Wallpaper
+swaybg -i ~/Pictures/light-wool.png -m tile -c 22aa99 >/dev/null 2>&1 &
+# Pink Wallpaper
+#swaybg -i ~/Pictures/light-wool.png -m tile -c f898d0 >/dev/null 2>&1 &
+# Linux Logo
+#swaybg -i ~/Pictures/linux-logo.svg -m center >/dev/null 2>&1 &
+
+#pcmanfm-qt --desktop >/dev/null 2>&1 &
+waybar >/dev/null 2>&1 &
+mako >/dev/null 2>&1 &
+gammastep -O 6000 2>&1 &
+swayidle -w timeout 600 'sudo zzz' 2>&1 &
+#brightnessctl set 40% 2>&1 &
+/usr/libexec/pipewire-launcher 2>&1 &
+#udiskie 2>&1 &
+#libinput-gestures-setup start 2>&1 &
+
+
+gsettings set org.gnome.desktop.interface gtk-theme 'WhiteSur-Light' 2>&1 &
+gsettings set org.gnome.desktop.interface font-name 'Misc OhSnap 11' 2>&1 &
+gsettings set org.gnome.desktop.interface icon-theme 'Haiku' 2>&1 &
+gsettings set org.gnome.desktop.interface cursor-theme 'capitaine-cursors-light' 2>&1 &
