@@ -5,7 +5,7 @@ Here's all my dotfiles. A README with some general instructions is included in e
 ## LabWC - 1920x1200
 [Go to files](LabWC-1920x1200)
 
-[![LabWC 1920x1200](LabWC-1920x1200/screen.png)]
+![LabWC 1920x1200](LabWC-1920x1200/screen.png)
 
 
 ## LabWC - Lenovo H50
