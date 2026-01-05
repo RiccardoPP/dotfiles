@@ -2,6 +2,12 @@
 
 Here's all my dotfiles. A README with some general instructions is included in every directories. Have fun with Linux!
 
+## LabWC - 1920x1200
+[Go to files](LabWC-1920x1200)
+
+[![LabWC 1920x1200](LabWC-1920x1200/screen.png)]
+
+
 ## LabWC - Lenovo H50
 [Go to files](LabWC-1280x1024-H50)
 
