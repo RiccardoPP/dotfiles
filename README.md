@@ -11,7 +11,7 @@ Here's all my dotfiles. A README with some general instructions is included in e
 ## LabWC - Lenovo H50
 [Go to files](LabWC-1280x1024-H50)
 
-[![LabWC Lenovo H50 Video](LabWC-1280x1024-H50/screen.png)](https://youtu.be/zsdxXwmFOOA)
+[![LabWC Lenovo H50 Video](https://img.youtube.com/vi/zsdxXwmFOOA/0.jpg)](https://youtu.be/zsdxXwmFOOA)
 
 
 ## LabWC - ASUS Chromebook Plus
