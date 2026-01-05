@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<openbox_menu>
+	<menu id="root-menu" label="" execute="labwc-menu-generator -p"/>
+</openbox_menu>
