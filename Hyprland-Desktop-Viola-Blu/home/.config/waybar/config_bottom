@@ -8,28 +8,34 @@
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 28, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules (4px)
+    "reload_style_on_change": true,
     "modules-left": [
         "custom/command",
         "hyprland/window"
     ],
-    "modules-center": [
-        "disk"
+//    "modules-center": [
+//        "disk"
 //        "wlr/workspaces"
-    ],
+//    ],
     "modules-right": [
         "custom/write",
-//        "custom/power_profile",
+        "power-profiles-daemon",
 //		"idle_inhibitor",
         "custom/pacman",
-        "custom/crypto"
+        "custom/waybar-crypto"
     ],
     // Modules configuration
-     "custom/power_profile": {
-        "exec": "sleep 0.3 && $HOME/scripts/powerprofilecycle.sh -m",
-        "interval": 120,
-        "on-click": "$HOME/scripts//powerprofilecycle.sh",
-        "exec-on-event": true,
-        "tooltip": false
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "PERFORMANCE",
+        "balanced": "BALANCED",
+        "power-saver": "POWER SAVER"
+      }
     },
     
     "idle_inhibitor": {
@@ -67,11 +73,11 @@
         "tooltip": false,
     },
     
-    "custom/crypto": {
+    "custom/waybar-crypto": {
         "format": "{}",
         "interval": 600,
         "return-type": "json",
-        "exec": "~/.config/waybar/modules/crypto/waybar_crypto.py",
+        "exec": "waybar-crypto",
         "exec-if": "ping pro-api.coinmarketcap.com -c1",
         "on-click": "firefox --new-tab https://it.tradingview.com"
     },
