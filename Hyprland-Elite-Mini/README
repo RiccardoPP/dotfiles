@@ -14,6 +14,7 @@ Dolphin
 Fuzzel
 Telegram
 Kdenlive
+LocalSend
 
 # Style
 Iosevka Nerd Fonts
@@ -29,5 +30,10 @@ paru -S $(cat aur.list)
 
 # Copy dots
 cp -r home/. /home/$USER
+
+# UFW LocalSend rules
+sudo ufw allow 53317/tcp
+sudo ufw allow 53317/udp
+sudo ufw reload 
 
 Happy Linux!
