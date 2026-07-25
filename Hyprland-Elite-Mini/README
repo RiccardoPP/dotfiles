@@ -25,8 +25,9 @@ Capitaine Cursors Light
 # Install Official packages
 sudo pacman -S $(cat package.list)
 
-# Install Aur packages
-paru -S $(cat aur.list)
+# Install Aur packages 
+# NOT NECESSARY!
+#paru -S $(cat aur.list)
 
 # Copy dots
 cp -r home/. /home/$USER
