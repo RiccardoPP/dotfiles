@@ -1,7 +1,7 @@
 ù#!/usr/bin/bash
 
 # wob
-$WOBSOCK $XDG_RUNTIME_DIR/wob.sock >/dev/null 2>&1 &
+#$WOBSOCK $XDG_RUNTIME_DIR/wob.sock >/dev/null 2>&1 &
 
 # wallpaper
 #swaybg -c '#3b05a6' & 
@@ -13,7 +13,7 @@ hyprpaper >/dev/null 2>&1 &
 #hyprpm reload >/dev/null 2>&1 &
 
 # hot corners
-waycorner >/dev/null 2>&1 &
+#waycorner >/dev/null 2>&1 &
 
 # brightness
 #brightnessctl set 35% >/dev/null 2>&1 &
@@ -48,4 +48,4 @@ systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP >/dev/nu
 # #gsettings set org.gnome.desktop.interface text-scaling-factor 1 &
 # gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' &
 #gsettings set org.cinnamon.desktop.default-applications.terminal exec foot >/dev/null 2>&1 &
-rm -f $WOBSOCK.wob && mkfifo $WOBSOCK.wob && tail -f $WOBSOCK.wob | wob >/dev/null 2>&1 &
+#rm -f $WOBSOCK.wob && mkfifo $WOBSOCK.wob && tail -f $WOBSOCK.wob | wob >/dev/null 2>&1 &
