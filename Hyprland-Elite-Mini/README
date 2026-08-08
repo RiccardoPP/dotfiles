@@ -18,9 +18,9 @@ LocalSend
 
 # Style
 Iosevka Nerd Fonts
-Capitaine Cursors Light
-(Qt) Breeze-openSUSE Light Icons (install in /usr/share/icons/)
-(GTK) Modern-Office-Night-Icons
+Breeze Cursors
+(Qt) Breeze-openSUSE Light Icons (install in /usr/share/icons/): https://store.kde.org/p/1339435/
+(GTK) Modern-Office-Night-Icons: https://store.kde.org/p/2346851
 
 # Install Official packages
 sudo pacman -S $(cat package.list)
