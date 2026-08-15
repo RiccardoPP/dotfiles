@@ -6,6 +6,7 @@
 
 # Main packages
 Hyprland
+Hyprexpo (plugin)
 Waybar
 Foot
 Firefox
@@ -25,9 +26,14 @@ Breeze Cursors
 # Install Official packages
 sudo pacman -S $(cat package.list)
 
-# Install Aur packages 
+# Install Aur packages
 # NOT NECESSARY!
 #paru -S $(cat aur.list)
+
+# Hyprexpo Plugin (https://hyprexpo.lol)
+hyprpm add https://github.com/sandwichfarm/hyprexpo
+hyprpm enable hyprexpo
+hyprpm reload
 
 # Copy dots
 cp -r home/. /home/$USER
@@ -35,6 +41,7 @@ cp -r home/. /home/$USER
 # UFW LocalSend rules
 sudo ufw allow 53317/tcp
 sudo ufw allow 53317/udp
-sudo ufw reload 
+sudo ufw reload
+
 
 Happy Linux!

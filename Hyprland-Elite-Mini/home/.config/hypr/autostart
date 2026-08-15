@@ -1,16 +1,16 @@
-ù#!/usr/bin/bash
+#!/usr/bin/bash
 
 # wob
 #$WOBSOCK $XDG_RUNTIME_DIR/wob.sock >/dev/null 2>&1 &
 
 # wallpaper
-#swaybg -c '#3b05a6' & 
+#swaybg -c '#3b05a6' &
 #swaybg -i $HOME/Pictures/linux-viola.svg &
 #swaybg -i $HOME/Pictures/boat3.png >/dev/null 2>&1 &
 hyprpaper >/dev/null 2>&1 &
 
 # plugin
-#hyprpm reload >/dev/null 2>&1 &
+hyprpm reload >/dev/null 2>&1 &
 
 # hot corners
 #waycorner >/dev/null 2>&1 &
@@ -18,10 +18,10 @@ hyprpaper >/dev/null 2>&1 &
 # brightness
 #brightnessctl set 35% >/dev/null 2>&1 &
 
-# blu light filter 
+# blu light filter
 hyprsunset  2>/dev/null &
 
-# notifications 
+# notifications
 mako >/dev/null 2>&1 &
 
 # max power on desktop
