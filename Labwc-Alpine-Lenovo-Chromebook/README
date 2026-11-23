@@ -1,0 +1,35 @@
+# Alpine Linux Dotfiles (Labwc)
+
+**Riccardo Palombo** - email at riccardo dot im
+**Video:** https://youtu.be/RGR3gQSStIA
+
+#  Optimized for 1920x1200 display. Based on Alpine Linux.
+
+## Main
+Labwc (with "RP" theme)
+Waybar
+Foot
+Fish Shell
+Firefox
+Gram (Zen Editor Fork)
+PCManfm-Qt (desktop icons)
+Fuzzel
+Mako
+Nwg-Look
+QT6CT
+Tlp
+Tlp-pd
+
+## UI
+CozetteVector Fonts
+Font Awesome
+Haiku Icons
+Capitaine Cursors
+
+## Copy dotfiles
+cp -r home/. /home/$USER
+
+## Fix script permissions
+chmod +x ~/.config/scripts/*
+
+Happy ricing!

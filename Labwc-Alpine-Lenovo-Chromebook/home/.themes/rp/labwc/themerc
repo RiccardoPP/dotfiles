@@ -1,0 +1,194 @@
+# =========================================================
+# GLOBAL GEOMETRY & BORDERS
+# =========================================================
+border.width:                 1
+window.client.padding.width:  0
+window.client.padding.height: 0
+window.handle.width:          1
+
+
+# =========================================================
+# WINDOW GEOMETRY & TEXT
+# =========================================================
+window.titlebar.padding.width: 2
+window.button.height:          28
+window.label.text.justify:     center
+
+window.active.label.text.font:   shadow=y
+window.inactive.label.text.font: shadow=y
+
+window.active.title.separator.color:   #181818
+window.inactive.title.separator.color: #181818
+
+
+# =========================================================
+# WINDOW SHADOWS & BORDERS
+# =========================================================
+window.active.border.color:   #282828
+window.inactive.border.color: #282828
+
+#window.active.shadow.size:    256
+#window.inactive.shadow.size:  256
+window.active.shadow.color:   #00000066
+window.inactive.shadow.color: #00000066
+
+
+# =========================================================
+# ACTIVE WINDOW STYLES
+# =========================================================
+# --- Title & Label ---
+window.active.title.bg:                 raised bevel
+window.active.title.bg.color:           #cccccc
+window.active.title.bg.colorTo:         #181818
+
+window.active.label.bg:                 flat interlaced
+window.active.label.bg.color:           #cccccc
+window.active.label.bg.interlace.color: #dddddd
+window.active.label.text.color:         black
+
+# --- Buttons: Unpressed ---
+window.active.button.unpressed.bg:            flat gradient bevel
+window.active.button.unpressed.bg.color:      #9a9a9a
+window.active.button.unpressed.bg.colorTo:    #ffffff
+window.active.button.unpressed.image.color:   #181818
+
+# --- Buttons: Hover ---
+window.active.button.hover.bg:                flat gradient bevel
+window.active.button.hover.bg.color:          #999999
+window.active.button.hover.bg.colorTo:        #ffffff
+window.active.button.hover.image.color:       white
+
+# --- Buttons: Pressed ---
+window.active.button.pressed.bg:              flat gradient bevel
+window.active.button.pressed.bg.color:        #9a9a9a
+window.active.button.pressed.bg.colorTo:      #ffffff
+window.active.button.pressed.image.color:     #181818
+
+# --- Buttons: Toggled ---
+window.active.button.toggled.bg:              flat gradient bevel
+window.active.button.toggled.bg.color:        #9a9a9a
+window.active.button.toggled.bg.colorTo:      #ffffff
+window.active.button.toggled.image.color:     #181818
+
+# --- Buttons: Disabled ---
+window.active.button.disabled.bg:             flat gradient bevel
+window.active.button.disabled.bg.color:       #9a9a9a
+window.active.button.disabled.bg.colorTo:     #ffffff
+window.active.button.disabled.image.color:    #181818
+
+
+# =========================================================
+# INACTIVE WINDOW STYLES
+# =========================================================
+# --- Title & Label ---
+window.inactive.title.bg:                 flat
+window.inactive.title.bg.color:           #dddddd
+window.inactive.title.bg.colorTo:         #141414
+
+window.inactive.label.bg:                 parentrelative
+window.inactive.label.bg.interlace.color: #dddddd
+window.inactive.label.text.color:         black
+
+# --- Buttons: Unpressed ---
+window.inactive.button.unpressed.bg:          flat gradient bevel
+window.inactive.button.unpressed.bg.color:    #9a9a9a
+window.inactive.button.unpressed.bg.colorTo:  #ffffff
+window.inactive.button.unpressed.image.color: #181818
+
+# --- Buttons: Hover ---
+window.inactive.button.hover.bg:              flat gradient bevel
+window.inactive.button.hover.bg.color:        #999999
+window.inactive.button.hover.bg.colorTo:      #ffffff
+window.inactive.button.hover.image.color:     white
+
+# --- Buttons: Pressed ---
+window.inactive.button.pressed.bg:            flat gradient bevel
+window.inactive.button.pressed.bg.color:      #9a9a9a
+window.inactive.button.pressed.bg.colorTo:    #ffffff
+window.inactive.button.pressed.image.color:   #181818
+
+# --- Buttons: Toggled ---
+window.inactive.button.toggled.bg:            flat gradient bevel
+window.inactive.button.toggled.bg.color:      #999999
+window.inactive.button.toggled.bg.colorTo:    #ffffff
+window.inactive.button.toggled.image.color:   #181818
+
+# --- Buttons: Disabled ---
+window.inactive.button.disabled.bg:           flat gradient bevel
+window.inactive.button.disabled.bg.color:     #999999
+window.inactive.button.disabled.bg.colorTo:   #ffffff
+window.inactive.button.disabled.image.color:  #181818
+
+
+# =========================================================
+# MENU STYLES & GEOMETRY
+# =========================================================
+# --- Geometry & Borders ---
+menu.border.width: 1
+menu.border.color: #353535
+menu.overlap.x:    -4
+menu.overlap.y:    0
+
+# --- Title ---
+menu.title.bg:                 raised bevel interlaced
+menu.title.bg.color:           #4d51a0
+menu.title.bg.colorTo:         #060606
+menu.title.bg.interlace.color: #ffffff
+menu.title.text.color:         #dddddd
+menu.title.text.font:          shadow=y
+menu.title.text.justify:       center
+
+# --- Standard Items ---
+menu.items.font:                 shadow=y
+menu.items.justify:              center
+menu.items.padding.left:         10
+menu.items.padding.right:        10
+menu.items.bg:                   flat solid
+menu.items.bg.color:             #cccccc
+menu.items.text.color:           black
+menu.items.disabled.text.color:  #454545
+
+# --- Active Items ---
+menu.items.active.bg:                 flat
+menu.items.active.bg.color:           #4d51a0
+menu.items.active.bg.colorTo:         #111111
+menu.items.active.bg.border.color:    #1f1f1f
+menu.items.active.justify:            center
+menu.items.active.text.color:         #ffffff
+menu.items.active.disabled.text.color:#454545
+
+# --- Separators ---
+menu.separator.color:          #454545
+menu.separator.padding.width:  2
+menu.separator.padding.height: 2
+
+
+# =========================================================
+# OSD (ON-SCREEN DISPLAY)
+# =========================================================
+osd.border.width: 1
+osd.border.color: #ffffff
+
+osd.bg:              flat solid border
+osd.bg.color:        #4d51a0
+osd.bg.border.color: #353535
+
+osd.label.bg:         parentrelative
+osd.label.text.color: #ffffff
+
+osd.hilight.bg:       flat solid
+osd.hilight.bg.color: #000000
+
+osd.unhilight.bg:       flat solid
+osd.unhilight.bg.color: #353535
+
+# osd.workspace-switcher.boxes.width:                60
+# osd.workspace-switcher.boxes.height:               60
+osd.window-switcher.style-classic.item.padding.x:  10
+
+
+# =========================================================
+# MAGNIFIER
+# =========================================================
+magnifier.border.width: 1
+magnifier.border.color: #cccccc

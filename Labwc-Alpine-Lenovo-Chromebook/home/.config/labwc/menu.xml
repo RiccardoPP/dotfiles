@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu >
+    <menu id="root-menu" label="Applications">
+        <menu id="Editors" label="Editors" icon="/usr/share/icons/Haiku/48x48/categories/applications-development.png">
+            <item label="Micro" icon="/usr/share/icons/Haiku/48x48/apps/microtube.png">
+                <action name="Execute">
+                    <command>foot micro</command>
+                </action>
+            </item>
+        </menu> <!-- Editors -->
+        <menu id="Internet" label="Internet" icon="/usr/share/icons/Haiku/48x48/categories/applications-internet.png">
+            <item label="Firefox" icon="/usr/share/icons/Haiku/48x48/apps/firefox.png">
+                <action name="Execute">
+                    <command>/usr/lib/firefox/firefox</command>
+                </action>
+            </item>
+        </menu> <!-- Internet -->
+        <menu id="Settings" label="Settings" icon="/usr/share/icons/Haiku/48x48/categories/preferences-desktop.png">
+            <item label="Desktop" icon="/usr/share/icons/Haiku/48x48/places/user-desktop.png">
+                <action name="Execute">
+                    <command>pcmanfm-qt --desktop-pref=general</command>
+                </action>
+            </item>
+            <item label="GTK Settings" icon="/usr/share/pixmaps/nwg-look.svg">
+                <action name="Execute">
+                    <command>nwg-look</command>
+                </action>
+            </item>
+            <item label="Qt6 Settings" icon="/usr/share/icons/Haiku/48x48/apps/preferences-desktop-theme.png">
+                <action name="Execute">
+                    <command>qt6ct</command>
+                </action>
+            </item>
+        </menu> <!-- Settings -->
+        <menu id="System" label="System" icon="/usr/share/icons/Haiku/48x48/categories/applications-system.png">
+            <item label="Foot" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+                <action name="Execute">
+                    <command>foot</command>
+                </action>
+            </item>
+            <item label="Foot Client" icon="/usr/share/icons/hicolor/48x48/apps/foot.png">
+                <action name="Execute">
+                    <command>footclient</command>
+                </action>
+            </item>
+            <item label="Foot Server" icon="/usr/share/icons/Haiku/48x48/actions/insert-footnote.png">
+                <action name="Execute">
+                    <command>foot --server</command>
+                </action>
+            </item>
+            <item label="Keyboard Layout" icon="/usr/share/icons/Haiku/48x48/apps/preferences-desktop-keyboard.png">
+                <action name="Execute">
+                    <command>gkbd-keyboard-display</command>
+                </action>
+            </item>
+            <item label="Xwayland">
+                <action name="Execute">
+                    <command>/usr/bin/Xwayland  -displayfd 1</command>
+                </action>
+            </item>
+        </menu> <!-- System -->
+        <menu id="Utilities" label="Utilities" icon="/usr/share/icons/Haiku/48x48/categories/applications-utilities.png">
+            <item label="Character Map" icon="/usr/share/icons/Haiku/48x48/apps/accessories-character-map.png">
+                <action name="Execute">
+                    <command>gucharmap</command>
+                </action>
+            </item>
+            <item label="Files" icon="/usr/share/icons/Haiku/48x48/apps/system-file-manager.png">
+                <action name="Execute">
+                    <command>nemo</command>
+                </action>
+            </item>
+            <item label="Gammastep" icon="/usr/share/icons/hicolor/scalable/apps/gammastep.svg">
+                <action name="Execute">
+                    <command>foot gammastep</command>
+                </action>
+            </item>
+            <item label="Gammastep Indicator" icon="/usr/share/icons/hicolor/scalable/apps/gammastep.svg">
+                <action name="Execute">
+                    <command>gammastep-indicator</command>
+                </action>
+            </item>
+            <item label="Micro" icon="/usr/share/icons/Haiku/48x48/apps/microtube.png">
+                <action name="Execute">
+                    <command>foot micro</command>
+                </action>
+            </item>
+            <item label="PCManFM-Qt File Manager" icon="/usr/share/icons/hicolor/scalable/apps/pcmanfm-qt.svg">
+                <action name="Execute">
+                    <command>pcmanfm-qt</command>
+                </action>
+            </item>
+        </menu> <!-- Utilities -->
+        <separator />
+        <item label="Exit" icon="/usr/share/icons/Haiku/48x48/actions/system-log-out.png">
+            <action name="Exit">
+            </action>
+        </item>
+    </menu>
+</openbox_menu>
