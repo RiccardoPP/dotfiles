@@ -2,6 +2,12 @@
 
 Here's all my dotfiles. A README with some general instructions is included in every directories. Have fun with Linux!
 
+
+## LabWC -  Lenovo Chromebook 14
+[Go to files](Labwc-Alpine-Lenovo-Chromebook)
+
+![LabWC-Alpine-Chromebook-Lenovo](Labwc-Alpine-Lenovo-Chromebook/screenshot.png)
+
 ## Hyprland - HP Elite Mini
 [Go to files](Hyprland-Elite-Mini)
 
